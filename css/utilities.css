@@ -1,0 +1,19 @@
+.content {
+    width: 90%;
+    margin: 4em auto;
+    text-align: justify;
+}
+
+.no-select {
+    user-select: none;
+}
+
+.no-overflow {
+    overflow: hidden;
+}
+
+.center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
