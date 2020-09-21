@@ -1,15 +1,9 @@
-.logo {
-    position: fixed;
-    float: left;
-    margin: 16px 36px;
-    color: #fff;
-    font-weight: bold;
-    font-size: 24px;
-}
-
 nav {
+    display: flex;
+    align-items: center;
     position: fixed;
     width: 100%;
+    transition: 1s;
 }
 
 nav ul {
@@ -20,11 +14,16 @@ nav ul {
     padding: 0;
     text-align: center;
     margin: 0;
-    transition: 1s;
 }
 
-nav.black ul {
+nav.black {
     background: #000;
+}
+
+nav .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav ul li {
@@ -38,9 +37,24 @@ nav ul li a {
     font-size: 20px;
 }
 
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    background: url("../assets/images/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 .menu-icon {
     width: 100%;
-    background: #000;
     text-align: right;
     box-sizing: border-box;
     padding: 16px 24px;
@@ -51,34 +65,31 @@ nav ul li a {
 
 @media (max-width: 580px){
 
-    .logo {
-        top: 0;
-        position: fixed;
-        margin-top: 16px;
-    }
-
-    nav ul {
-        max-height: 0px;
+    nav {
         background: #000;
     }
 
-    nav.black ul {
-        background: #000;
+    .navbar {
+        flex-direction: column;
     }
 
     .showing {
         max-height: 20em;
     }
 
+    nav ul {
+        max-height: 0;
+        transition: 1s;
+    }
+
     nav ul li {
-        box-sizing: border-box;
         width: 100%;
         padding: 24px 0;
         text-align: center;
     }
 
     .menu-icon {
-        display: block;
+        display: inline-block;
     }
 
 }
