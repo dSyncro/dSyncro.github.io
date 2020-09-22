@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('scroll', () => {
     if (window.scrollY != 0)
-        navbar.classList.add('black');
-    else navbar.classList.remove('black');
+        navbar.classList.add('opaque');
+    else navbar.classList.remove('opaque');
 });
 
 function removePreloader() {

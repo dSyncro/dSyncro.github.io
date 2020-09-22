@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+:root {
+    --text-main: #FFF;
+    --text-accent: #00FF8A;
+    --background-color: #121212;
+    --theme-color: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-main: #000;
+        --text-accent: #00cc6e;
+        --background-color: #EEFFFF;
+        --theme-color: #FFF;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--background-color);
+    font-family: 'Quicksand', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--text-accent);
+}
+
+.headline-container {
+    position: relative;
+    height: 100%;
+    background: url("../assets/images/main_image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.headline-container h1 {
+    color: #FFF;
+    font-size: 4em;
+}
+
+.headline-container p {
+    font-size: 2em;
+}
+
+.headline-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-holder i {
+    padding-right: 24px;
+    font-size: 2em;
+}
+
+.text-accent {
+    color: var(--text-accent);
+}
+
+.text-main {
+    color: var(--text-main);
+}
+
+#about h1 {
+    color: var(--text-accent);
+    font-size: 3em;
+}
+
+#about p {
+    color: var(--text-main);
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+#follow-me {
+    color: var(--text-main);
+}
