@@ -6,7 +6,7 @@
     --theme-color: #000;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     :root {
         --text-main: #000;
         --text-accent: #00cc6e;
