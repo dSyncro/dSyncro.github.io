@@ -6,6 +6,8 @@ const lightToggle = document.querySelector('#light-toggle input[type="checkbox"]
 
 let lightOn = false;
 
+selectDefaultTheme();
+
 document.addEventListener('DOMContentLoaded', () => {
     hamburgerIcon.addEventListener('click', () => {
         list.classList.toggle('showing');
@@ -41,7 +43,6 @@ function removePreloader() {
 }
 
 window.addEventListener('load', () => {
-    selectDefaultTheme();
     lightToggle.addEventListener('change', toggleLight);
     removePreloader();
 });
