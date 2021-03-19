@@ -1,0 +1,98 @@
+.horizontal-scroller {
+    --gutter: 10rem;
+    display: grid;
+    grid-gap: 4rem;
+    grid-template-columns: .5rem;
+    grid-template-rows: minmax(25rem, 1fr);
+    grid-auto-flow: column;
+    grid-auto-columns: calc(35rem);
+    scroll-snap-type: x proximity;
+}
+
+.horizontal-scroller:before, .horizontal-scroller:after {
+    content: '';
+    width: .5rem;
+}
+
+.card {
+    position: relative;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    overflow: hidden;
+    background-size: cover;
+    background: #fff;
+}
+
+.card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .caption {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    position: absolute;
+    height: 8rem;
+    backdrop-filter: blur(25px);
+    background-color: rgba(0, 0, 0, 0.9);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    transition: 450ms;
+    padding: 2rem;
+}
+
+.card .caption a {
+    border-radius: 9999px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    border: 2px solid #fff;
+    padding: 1rem;
+    color: #fff;
+    transition: 300ms;
+    display: none;
+}
+
+.card .caption a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.card .caption p {
+    font-size: 2rem;
+    display: none;
+    text-align: justify;
+    margin: 2rem;
+    flex: 1;
+    overflow: hidden;
+}
+
+.card:hover .caption a {
+    display: block;
+}
+
+.card:hover .caption h1 {
+    color: var(--accent);
+    font-size: 3rem;
+}
+
+.card:hover .caption {
+    width: 100%;
+    height: 100%;
+}
+
+.card:hover .caption p {
+    display: inline;
+}

@@ -1,113 +1,96 @@
 nav {
-    display: flex;
-    align-items: center;
     position: fixed;
-    width: 100%;
-    transition: 1s;
-    z-index: 1000;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    overflow: hidden;
-    padding: 0;
-    margin: 0; 
-    text-align: center;
-    align-items: center;
-}
-
-nav.opaque {
-    background: var(--theme-color);
-}
-
-nav .buttons {
+    width: 100vw;
+    padding: 2rem 4rem;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 9999;
+    transition: 450ms;
 }
 
-nav ul li {
-    display: inline-block;
-    padding: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #FFF;
-    font-size: 20px;
-    transition: .2s;
-}
-
-nav ul li a:hover {
-    color: var(--text-accent);
-}
-
-nav.opaque ul li a {
-    color: var(--text-main);
-}
-
-nav.opaque ul li a:hover {
-    color: var(--text-accent);
-}
-
-.navbar {
+nav .navigation {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
-.logo {
-    width: 48px;
-    height: 48px;
-    background: url("../assets/images/logo.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.menu-icon {
-    width: 100%;
-    text-align: right;
-    box-sizing: border-box;
-    padding: 16px 24px;
-    cursor: pointer;
-    color: var(--text-main);
+nav .hamburger-menu {
+    font-size: 2rem;
     display: none;
 }
 
-@media (max-width: 580px){
+nav.opaque {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(25px);
+}
 
+nav h1 {
+    user-select: none;
+    font-size: 2rem;
+}
+
+nav h1::before {
+    content: '{} Domenico Mancini';
+}
+
+nav ul {
+    font-weight: 100;
+    display: flex;
+}
+
+nav ul :not(:last-child) {
+    margin-right: 2rem;
+}
+
+nav ul li a {
+    font-size: var(--font-h6);
+}
+
+@media (max-width: 75rem) {
     nav {
-        background: var(--theme-color);
-    }
-
-    .navbar {
         flex-direction: column;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(25px);
     }
-
-    .showing {
-        max-height: 20em;
-    }
-
     nav ul {
-        display: block;
-        max-height: 0;
-        transition: 1s;
-    }
-
-    nav ul li {
+        margin-top: 2rem;
         width: 100%;
-        padding: 24px 0;
+        flex-direction: column;
         text-align: center;
+        display: none;
     }
-
+    nav ul.shown{
+        display: block;
+    }
+    nav ul :not(:last-child) {
+        width: 100%;
+        margin-right: 0;
+    }
     nav ul li a {
-        color: var(--text-main);
+        padding: 1rem;
+        width: 100%;
+        display: block;
+        transition: 450ms;
     }
-
-    .menu-icon {
-        display: inline-block;
+    nav ul li a:hover {
+        color: #000;
+        background: var(--accent);
+        font-weight: 400;
+        transform: scale(1.1);
     }
-
+    nav h1::before{
+        content: '{DM}';
+    }
+    nav .hamburger-menu {
+        display: block;
+        transition: 300ms;
+    }
+    nav .hamburger-menu:hover{
+        color: var(--accent);
+    }
+    nav .navigation {
+        width: 100%;
+    }
 }

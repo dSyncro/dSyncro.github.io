@@ -1,94 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-:root {
-    --text-main: #FFF;
-    --text-accent: #00FF8A;
-    --background-color: #121212;
-    --theme-color: #000;
+#main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 2rem 0;
 }
 
-[data-theme="light"] {
-    --text-main: #000;
-    --text-accent: #00cc6e;
-    --background-color: #FFF;
-    --theme-color: #FFF;
+#main img {
+    width: 25%;
+    padding: 3rem;
+    height: auto;
 }
 
-* {
-    box-sizing: border-box;
+#main .heading-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+#main .heading {
+    font-style: italic;
+    line-height: 1.5;
 }
 
-body {
-    background: var(--background-color);
-    font-family: 'Quicksand', sans-serif;
+#main .heading h3 {
+    font-size: var(--font-h3);
+    font-style: italic;
+    color: var(--accent);
+    opacity: .25;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
+#main .heading .title {
+    padding: 0 5rem;
 }
 
-a:hover {
-    color: var(--text-accent);
+#main .heading .title h2 {
+    font-size: var(--font-h2);
 }
 
-.headline-container {
-    position: relative;
-    height: 100%;
-    background: url("../assets/images/main_image.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+#main .heading .title h2 {
+    font-size: 2rem;
 }
 
-.headline-container h1 {
-    color: #FFF;
-    font-size: 4em;
+#main .heading .title span {
+    font-size: 1rem;
+    color: var(--accent);
+    opacity: .25;
 }
 
-.headline-container p {
-    font-size: 2em;
+#main .heading .title .subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.headline-layout {
+#main .link-icons {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
     align-items: center;
-    justify-content: center;
 }
 
-.social-holder i {
-    padding-right: 24px;
-    font-size: 2em;
+#main .link-icons :not(:last-child) {
+    margin-bottom: 3rem;
 }
 
-.text-accent {
-    color: var(--text-accent);
+#main .link-icons a {
+    font-size: var(--font-h2);
 }
 
-.text-main {
-    color: var(--text-main);
+@media (max-width: 90rem) {
+    #main {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+    #main .link-icons {
+        flex-direction: row;
+        margin: 3rem 0;
+    }
+    #main .link-icons :not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 3rem;
+    }
 }
 
-#about h1 {
-    color: var(--text-accent);
-    font-size: 3em;
-}
-
-#about p {
-    color: var(--text-main);
-    font-size: 1.5em;
-    text-align: justify;
-}
-
-#follow-me {
-    color: var(--text-main);
+@media (max-width: 70rem) {
+    #main .heading-wrapper {
+        flex-direction: column;
+    }
+    #main img {
+        width: 35vmax;
+        height: 35vmax;
+    }
+    #main .heading .title {
+        padding: 0 5vw;
+    }
+    #main .heading h3 {
+        font-size: 4.5vw;
+    }
+    #main .heading .title h2 {
+        font-size: 5vw;
+    }
+    
+    #main .heading .title h4 {
+        font-size: 3.75vw;
+    }
+    
+    #main .heading .title span {
+        font-size: 3vw;
+    }
 }

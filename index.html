@@ -2,89 +2,355 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work in progress...</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/preloader.css">
-    <link rel="stylesheet" href="css/utilities.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/scrollbar.css">
-    <link rel="stylesheet" href="css/day-night-toggle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-        crossorigin="anonymous" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+		integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+		crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.0/simplebar.min.css"
+		integrity="sha512-uZTwaYYhJLFXaXYm1jdNiH6JZ1wLCTVnarJza7iZ1OKQmvi6prtk85NMvicoSobylP5K4FCdGEc4vk1AYT8b9Q=="
+		crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.10.1/devicon.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+	<title>Domenico Mancini</title>
 </head>
 
-<body class="no-overflow">
+<body>
+	<img class="background-logo" src="img/dSyncro.png" alt="Background Logo"></img>
 
-    <div class="preloader">
-        <div class="loader"></div>
-    </div>
+	<nav>
+		<div class="navigation">
+			<h1></h1>
 
-    <nav>
-        <div class="navbar container">
+			<i class="fas fa-code hamburger-menu"></i>
+		</div>
 
-            <div class="buttons">
-                <div class="logo"></div>
+		<ul>
+			<li><a href="#is">.is()</a></li>
+			<li><a href="#">.works()</a></li>
+			<li><a href="#">.skills()</a></li>
+			<li><a href="#">.contact()</a></li>
+		</ul>
+	</nav>
 
-                <div class="menu-icon">
-                    <i class="fas fa-bars fa-2x"></i>
-                </div>
-            </div>
+	<header>
+		<section id="main">
 
+			<div class="link-icons">
+				<a href=""><i class="fab fa-instagram"></i></a>
+				<a href=""><i class="fab fa-github"></i></a>
+				<a href=""><i class="fab fa-youtube"></i></a>
+			</div>
 
-            <div class="menu">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#follow-me">Follow Me</a></li>
-                    <li>
-                        <label class="switch" id="light-toggle">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+			<div class="heading-wrapper">
+				<img src="img/dSyncro.png" alt="">
 
-    <div class="headline-container">
-        <div class="headline-layout no-select">
-            <h1>
-                I<span class="text-accent">'</span>m <br>
-                Domenico <br>
-                Mancini
-                <span class="text-accent">.</span>
-            </h1>
-            <p class="text-accent">Developer and Designer.</p>
-        </div>
-    </div>
+				<div class="heading">
+					<h3>&lt;h1&gt;</h3>
+					<div class="title">
+						<h2>I am Domenico Mancini</h2>
+						<div class="subtitle">
+							<span>&lt;span&gt;</span>
+							<h4>A Full Stack Developer</h4>
+							<span>&lt;/span&gt;</span>
+						</div>
+					</div>
+					<h3>&lt;/h1&gt;</h3>
+				</div>
+			</div>
+		</section>
 
-    <div class="content">
+		<div class="mouse-wrapper">
+			<div class="mouse"></div>
+			<p>Scroll</p>
+		</div>
+	</header>
 
-        <section id="about">
-            <h1 class="no-select">About Me</h1>
-            <p>There is not much here yet. But for sure things are coming.</p>
-        </section>
+	<main>
+		<section id="is" class="page-section">
+			<h1 class="section-title">
+				<span>.about</span>:selected
+			</h1>
+			<div class="presentation">
+				<img class="rounded" src="img/portrait.jpg" alt="">
+				<div class="text">
+					<p>Hi there! 👋</p>
+					<p>
+						I am Domenico Mancini, a self taught full stack developer and web designer from Italy.
+						I create high performance & interactive websites and web applications that work well on all
+						devices
+						and
+						platforms.
+					</p>
+					<p>
+						I am very familiar with frameworks however where possible I like to provide high quality
+						hand-coded
+						websites using HTML, CSS and JS or PHP to give each person a unique feeling to his very own
+						product.
+					</p>
+				</div>
+			</div>
+		</section>
 
-        <section id="follow-me" class="center-content">
-            <div class="social-container">
-                <h2 class="no-select">Follow me on</h2>
-                <div class="social-holder">
-                    <a href="https://www.github.com/dSyncro/" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.instagram.com/not.domenico/" target="_blank"><i
-                            class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/channel/UCHXaq9C4xvLDlUsfcqFXcog/" target="_blank"><i
-                            class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-    </div>
+		<section id="works" class="page-section">
+			<h1 class="section-title">
+				<span>.works</span>.selected = <span>true</span>
+			</h1>
 
-    </div>
+			<div data-simplebar data-hscroll class="full" style="padding: 2rem;">
+				<div class="horizontal-scroller">
+					<div class="card">
+						<img src="img/card-back.jpg" alt="">
+						<div class="caption">
+							<h1>Responsive Design</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eius mollitia veritatis
+								expedita
+								dolor quis, possimus culpa fugiat labore pariatur molestias. Placeat possimus
+								repudiandae
+								odit consequatur reiciendis nostrum, inventore laborum?</p>
+							<a href="">See More ></a>
+						</div>
+					</div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+					<div class="card"></div>
+				</div>
+			</div>
+		</section>
 
-    <script src="js/index.js"></script>
+		<section id="skills" class="page-section">
+			<h1 class="section-title">
+				<span>.skills</span>.showcase()
+			</h1>
+			<div class="aligner">
+				<div class="skills">
+					<div class="languages">
+						<h1>Languages</h1>
+
+						<div class="rounded skill-item" data-pro>
+							<i class="devicon-html5-plain"></i>
+							<p>HTML</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-pro>
+							<i class="devicon-css3-plain"></i>
+							<p>CSS</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-pro>
+							<i class="devicon-javascript-plain"></i>
+							<p>JS</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-pro>
+							<i class="devicon-php-plain"></i>
+							<p>PHP</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-pro>
+							<i class="devicon-cplusplus-plain"></i>
+							<p>C++</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-pro>
+							<i class="devicon-csharp-plain"></i>
+							<p>C#</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-pro>
+							<i class="devicon-python-plain"></i>
+							<p>Python</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-pro>
+							<i class="devicon-kotlin-plain"></i>
+							<p>Kotlin</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-mid>
+							<i class="devicon-java-plain"></i>
+							<p>Java</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-mid>
+							<i class="devicon-typescript-plain"></i>
+							<p>TypeScript</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+					</div>
+					<div class="frameworks">
+						<h1>Frameworks</h1>
+
+						<div class="rounded skill-item" data-mid>
+							<i class="devicon-react-original"></i>
+							<p>React</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-pro>
+							<i class="devicon-nodejs-plain"></i>
+							<p>NodeJS</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-mid>
+							<i class="devicon-css3-plain"></i>
+							<p>TailwindCSS</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-pro>
+							<i class="devicon-bootstrap-plain"></i>
+							<p>Bootstrap</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-noob>
+							<i class="devicon-django-plain"></i>
+							<p>Django</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+					</div>
+					<div class="applications">
+						<h1>Applications</h1>
+
+						<div class="rounded skill-item" data-pro>
+							<i class="devicon-photoshop-plain"></i>
+							<p>Photoshop</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-pro>
+							<i class="devicon-illustrator-plain"></i>
+							<p>Illustrator</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-pro>
+							<i class="devicon-react-original"></i>
+							<p>Blender</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-pro>
+							<i class="fas fa-video"></i>
+							<p>DaVinci Resolve</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-pro>
+							<i class="devicon-visualstudio-plain"></i>
+							<p>Visual Studio</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-pro>
+							<i class="devicon-visualstudio-plain"></i>
+							<p>VSCode</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-pro>
+							<i class="fab fa-unity"></i>
+							<p>Unity</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-mid>
+							<i class="fas fa-images"></i>
+							<p>Affinity Photo</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-noob>
+							<i class="fas fa-vector-square"></i>
+							<p>Affinity Design</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-mid>
+							<i class="devicon-premierepro-plain"></i>
+							<p>Premiere Pro</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-pro>
+							<i class="fab fa-figma"></i>
+							<p>Figma</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+
+						<div class="rounded skill-item" data-pro>
+							<i class="devicon-xd-plain"></i>
+							<p>Adobe XD</p>
+							<i class="fas fa-check checkmark"></i>
+						</div>
+					</div>
+				</div>
+
+				<div class="legend">
+					<div class="legend-item">
+						<div class="color-item rounded" data-pro></div>
+						<p>Expert</p>
+					</div>
+					<div class="legend-item">
+						<div class="color-item rounded" data-mid></div>
+						<p>Learning</p>
+					</div>
+					<div class="legend-item">
+						<div class="color-item rounded" data-noob></div>
+						<p>Basic</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<p>&lt;footer&gt;</p>
+		<div class="actual-footer">
+			<a href="#"><img src="img/dSyncro.png" alt="dSyncro Logo"></a>
+			<div class="content">
+				<div class="link-icons">
+					<a href=""><i class="fab fa-instagram"></i></a>
+					<a href=""><i class="fab fa-github"></i></a>
+					<a href=""><i class="fab fa-youtube"></i></a>
+				</div>
+				<p>Domenico Mancini &copy; 2021</p>
+			</div>
+			<div class="goto-top">
+				<p style="align-self: flex-start;">&lt;a href=&quot;#&quot;&gt;</p>
+				<a><i class="fas fa-chevron-up"></i></a>
+				<p style="align-self: flex-end;">&lt;/a&gt;</p>
+				<h3>Go to top!</h3>
+			</div>
+		</div>
+		<p>&lt;/footer&gt;</p>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.0/simplebar.min.js"
+		integrity="sha512-AS9rZZDdb+y4W2lcmkNGwf4swm6607XJYpNST1mkNBUfBBka8btA6mgRmhoFQ9Umy8Nj/fg5444+SglLHbowuA=="
+		crossorigin="anonymous"></script>
+	<script src="js/horizontalScrolling.js"></script>
+	<script src="js/navbar.js"></script>
 </body>
 
 </html>

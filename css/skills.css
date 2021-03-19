@@ -1,0 +1,119 @@
+.skills {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.skills>:not(:last-child) {
+    margin-right: 3rem;
+}
+
+.skills :is(.languages, .frameworks, .applications)> :not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.skills h1 {
+    font-size: var(--font-h5);
+}
+
+#skills .skills .skill-item {
+    display: flex;
+    background: #000;
+    width: 20rem;
+    padding: .75rem 1rem;
+    font-size: var(--font-h6);
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--text-font);
+}
+
+#skills .skills .skill-item[data-noob] .checkmark {
+    color: var(--red);
+}
+
+#skills .skills .skill-item[data-mid] .checkmark {
+    color: var(--orange);
+}
+
+#skills .skills .skill-item[data-pro] .checkmark {
+    color: var(--accent);
+}
+
+#skills .legend {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: var(--font-h6);
+    font-family: var(--text-font);
+}
+
+#skills .legend>.legend-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+}
+
+#skills .legend>.legend-item>:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+#skills .legend>.legend-item>.color-item {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #fff;
+}
+
+#skills .legend>.legend-item>.color-item[data-pro] {
+    background: var(--accent);
+}
+
+#skills .legend>.legend-item>.color-item[data-mid] {
+    background: var(--orange);
+}
+
+#skills .legend>.legend-item>.color-item[data-noob] {
+    background: var(--red);
+}
+
+#skills .legend>.legend-item:hover {
+    background: #000;
+}
+
+#skills .aligner {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media (max-width: 95rem) {
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skills>:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+    .skills :is(.languages, .frameworks, .applications)> :not(:last-child){
+        margin-bottom: 0;
+    }
+
+    #skills .skills .skill-item {
+        display: inline-flex;
+        margin: .5rem;
+    }
+    #skills .aligner {
+        flex-direction: column-reverse;
+    }
+    #skills .legend {
+        margin-bottom: 4rem;
+    }
+}
+
+@media (max-width: 48rem) {
+    #skills .skills .skill-item {
+        width: 15rem;
+    }
+}
