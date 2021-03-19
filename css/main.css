@@ -33,14 +33,11 @@
 
 #main .heading .title {
     padding: 0 5rem;
+    text-align: center;
 }
 
 #main .heading .title h2 {
     font-size: var(--font-h2);
-}
-
-#main .heading .title h2 {
-    font-size: 2rem;
 }
 
 #main .heading .title span {
