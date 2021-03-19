@@ -1,7 +1,8 @@
 .works-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 2rem;
+    grid-gap: 1rem;
+    gap: 1rem;
 }
 
 .works-grid .card {
@@ -12,7 +13,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 30px;
     overflow: hidden;
     background-size: cover;
 }
@@ -92,6 +92,10 @@
     .works-grid {
         display: flex;
         flex-direction: column;
+        gap: initial;
+    }
+    .works-grid>:not(:last-child){
+        margin-bottom: 1rem;
     }
     .works-grid .card {
         width: 100%;
