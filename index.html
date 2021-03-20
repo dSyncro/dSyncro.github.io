@@ -18,12 +18,27 @@
 	<title>Domenico Mancini</title>
 </head>
 
-<body>
+<body class="no-scroll">
+
+	<div class="loader">
+		<h1>
+			Website is <span>Building</span>...
+		</h1>
+	</div>
+
+	<!--div id="contact">
+		<form action="mailto:">
+
+		</form>
+	</div-->
+
 	<img class="background-logo" src="img/dSyncro.png" alt="Background Logo"></img>
 
 	<nav>
 		<div class="navigation">
-			<a id="dm"><h1></h1></a>
+			<a id="dm">
+				<h1></h1>
+			</a>
 			<i class="fas fa-code hamburger-menu"></i>
 		</div>
 
@@ -45,7 +60,7 @@
 			</div>
 
 			<div class="heading-wrapper">
-				<img src="img/dSyncro.png" alt="">
+				<img src="img/dSyncro.png" alt="dSyncro Logo">
 
 				<div class="heading">
 					<h3>&lt;h1&gt;</h3>
@@ -101,15 +116,11 @@
 
 			<div class="works-grid">
 				<div class="card">
-					<img src="img/card-back.jpg" alt="">
+					<img src="img/thisWebsite.png" alt="">
 					<div class="caption">
-						<h1>Responsive Design</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea eius mollitia veritatis
-							expedita
-							dolor quis, possimus culpa fugiat labore pariatur molestias. Placeat possimus
-							repudiandae
-							odit consequatur reiciendis nostrum, inventore laborum?</p>
-						<a href="">See More ></a>
+						<h1>This Website</h1>
+						<p>You would never ever tell it, right?</p>
+						<a href="#">See More <i class="fas fa-chevron-right fa-xs"></i></a>
 					</div>
 				</div>
 				<div class="card">
@@ -121,7 +132,7 @@
 							dolor quis, possimus culpa fugiat labore pariatur molestias. Placeat possimus
 							repudiandae
 							odit consequatur reiciendis nostrum, inventore laborum?</p>
-						<a href="">See More ></a>
+						<a href="">See More <i class="fas fa-chevron-right fa-xs"></i></a>
 					</div>
 				</div>
 				<div class="card">
@@ -133,7 +144,7 @@
 							dolor quis, possimus culpa fugiat labore pariatur molestias. Placeat possimus
 							repudiandae
 							odit consequatur reiciendis nostrum, inventore laborum?</p>
-						<a href="">See More ></a>
+						<a href="">See More <i class="fas fa-chevron-right fa-xs"></i></a>
 					</div>
 				</div>
 				<div class="card">
@@ -145,7 +156,7 @@
 							dolor quis, possimus culpa fugiat labore pariatur molestias. Placeat possimus
 							repudiandae
 							odit consequatur reiciendis nostrum, inventore laborum?</p>
-						<a href="">See More ></a>
+						<a href="">See More <i class="fas fa-chevron-right fa-xs"></i></a>
 					</div>
 				</div>
 			</div>
@@ -156,7 +167,7 @@
 				<span>.skills</span>.showcase()
 			</h1>
 			<div class="aligner">
-				<div class="skills">
+				<div class="skills-wrapper">
 					<div class="languages">
 						<h1>Languages</h1>
 
@@ -331,17 +342,20 @@
 				</div>
 
 				<div class="legend">
-					<div class="legend-item">
+					<div class="legend-item rounded" id="pro">
 						<div class="color-item rounded" data-pro></div>
 						<p>Expert</p>
+						<i class="clear-filter fas fa-times fa-xs"></i>
 					</div>
-					<div class="legend-item">
+					<div class="legend-item rounded" id="mid">
 						<div class="color-item rounded" data-mid></div>
 						<p>Learning</p>
+						<i class="clear-filter fas fa-times fa-xs"></i>
 					</div>
-					<div class="legend-item">
+					<div class="legend-item rounded" id="noob">
 						<div class="color-item rounded" data-noob></div>
 						<p>Basic</p>
+						<i class="clear-filter fas fa-times fa-xs"></i>
 					</div>
 				</div>
 			</div>
@@ -375,6 +389,8 @@
 		crossorigin="anonymous"></script>
 	<script src="js/navbar.js"></script>
 	<script src="js/scrollIntoView.js"></script>
+	<script src="js/skillsSelector.js"></script>
+	<script src="js/preloader.js"></script>
 </body>
 
 </html>

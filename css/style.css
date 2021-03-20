@@ -1,12 +1,13 @@
 @import url('core.css');
 @import url('navbar.css');
 @import url('mouseScroll.css');
-@import url('horizontalScroller.css');
+@import url('works.css');
 @import url('customScrollbar.css');
 @import url('main.css');
 @import url('skills.css');
 @import url('footer.css');
 @import url('is.css');
+@import url('preloader.css');
 html, body {
     padding: 0;
     margin: 0;
@@ -80,8 +81,14 @@ section.page-section>.full {
 
 @media (max-width: 70rem) {
     section.page-section {
-        display: grid;
         grid-template-columns: 2rem 1fr 2rem;
-        padding-bottom: 4rem;
+        padding-bottom: 2rem;
+    }
+}
+
+@media (max-width: 48rem) {
+    section.page-section {
+        grid-template-columns: 1rem 1fr 1rem;
+        padding-bottom: 1rem;
     }
 }

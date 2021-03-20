@@ -6,3 +6,7 @@
 .rounded {
     border-radius: 9999px;
 }
+
+.no-scroll {
+    overflow: hidden;
+}

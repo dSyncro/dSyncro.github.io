@@ -56,11 +56,11 @@ footer .actual-footer .goto-top p {
     font-weight: 100;
     color: var(--accent);
     opacity: .25;
-    font-size: 1.5vmax;
+    font-size: 1vmax;
 }
 
 footer .actual-footer .goto-top a {
-    font-size: 3vmax;
+    font-size: 2.5vmax;
     padding: .5rem 2rem;
 }
 
@@ -68,7 +68,7 @@ footer .actual-footer .goto-top h3 {
     line-height: 2;
     color: #fff;
     font-weight: 100;
-    font-size: 2vmax;
+    font-size: 1.5vmax;
 }
 
 @media (max-width: 70rem) {

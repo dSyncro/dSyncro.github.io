@@ -1,22 +1,22 @@
-.skills {
+#skills .skills-wrapper {
     display: flex;
     justify-content: center;
     text-align: center;
 }
 
-.skills>:not(:last-child) {
+#skills .skills-wrapper>:not(:last-child) {
     margin-right: 3rem;
 }
 
-.skills :is(.languages, .frameworks, .applications)> :not(:last-child) {
+#skills .skills-wrapper :is(.languages, .frameworks, .applications)> :not(:last-child) {
     margin-bottom: 1rem;
 }
 
-.skills h1 {
+#skills .skills-wrapper h1 {
     font-size: var(--font-h5);
 }
 
-#skills .skills .skill-item {
+#skills .skills-wrapper .skill-item {
     display: flex;
     background: #000;
     width: 20rem;
@@ -25,17 +25,30 @@
     justify-content: space-between;
     align-items: center;
     font-family: var(--text-font);
+    transition: 500ms;
 }
 
-#skills .skills .skill-item[data-noob] .checkmark {
+#skills .skills-wrapper.filtered .skill-item {
+    opacity: .25;
+    filter: grayscale(100%);
+    transform: scale(.95);
+}
+
+#skills .skills-wrapper.filtered .skill-item.selected {
+    opacity: 1;
+    filter: none;
+    transform: scale(1.05);
+}
+
+#skills .skills-wrapper .skill-item[data-noob] .checkmark {
     color: var(--red);
 }
 
-#skills .skills .skill-item[data-mid] .checkmark {
+#skills .skills-wrapper .skill-item[data-mid] .checkmark {
     color: var(--orange);
 }
 
-#skills .skills .skill-item[data-pro] .checkmark {
+#skills .skills-wrapper .skill-item[data-pro] .checkmark {
     color: var(--accent);
 }
 
@@ -47,12 +60,20 @@
     font-family: var(--text-font);
 }
 
+#skills .legend>:not(:last-child) {
+    margin-bottom: .5rem;
+}
+
 #skills .legend>.legend-item {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: .5rem 1rem;
+}
+
+#skills .legend>.legend-item.selected {
+    background: #000;
 }
 
 #skills .legend>.legend-item>:not(:last-child) {
@@ -63,6 +84,18 @@
     width: 1.5rem;
     height: 1.5rem;
     background: #fff;
+}
+
+#skills .legend>.legend-item>.clear-filter {
+    display: none;
+}
+
+#skills .legend>.legend-item>.clear-filter:hover {
+    color: var(--accent);
+}
+
+#skills .legend>.legend-item.selected>.clear-filter {
+    display: initial;
 }
 
 #skills .legend>.legend-item>.color-item[data-pro] {
@@ -88,19 +121,18 @@
 }
 
 @media (max-width: 95rem) {
-    .skills {
+    #skills .skills-wrapper {
         flex-direction: column;
         align-items: center;
     }
-    .skills>:not(:last-child) {
+    #skills .skills-wrapper>:not(:last-child) {
         margin-right: 0;
         margin-bottom: 2rem;
     }
-    .skills :is(.languages, .frameworks, .applications)> :not(:last-child){
+    #skills .skills-wrapper :is(.languages, .frameworks, .applications)> :not(:last-child) {
         margin-bottom: 0;
     }
-
-    #skills .skills .skill-item {
+    #skills .skills-wrapper .skill-item {
         display: inline-flex;
         margin: .5rem;
     }
@@ -113,7 +145,16 @@
 }
 
 @media (max-width: 48rem) {
-    #skills .skills .skill-item {
+    #skills .skills-wrapper .skill-item {
         width: 15rem;
+    }
+}
+
+@media (max-width: 20rem){
+    #skills .skills-wrapper .skill-item {
+        width: 12rem;
+    }
+    #skills .skills-wrapper .skill-item p {
+        font-size: .75rem;
     }
 }
