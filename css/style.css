@@ -18,6 +18,7 @@ body {
     font-family: var(--heading-font);
     color: #fff;
     background: var(--background);
+    scroll-behavior: smooth;
 }
 
 a {
