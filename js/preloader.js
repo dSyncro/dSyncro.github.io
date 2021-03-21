@@ -7,7 +7,7 @@ let interval = setInterval(() => {
     intervalCount++;
     intervalCount %= 4;
     preloaderText.innerHTML = `Website is <span>Building</span>${'.'.repeat(intervalCount)}`;
-}, 500);
+}, 350);
 
 
 window.addEventListener('load', () => {
