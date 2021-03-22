@@ -1,0 +1,116 @@
+@use 'core';
+
+#main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 2rem 0;
+
+    img {
+        width: 25%;
+        padding: 3rem;
+        height: auto;
+
+        @media (max-width: 70rem) {
+            width: 35vmax;
+            height: 35vmax;
+        }
+    }
+
+    .heading-wrapper {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        @media (max-width: 70rem) {
+            flex-direction: column;
+        }
+    }
+
+    .heading {
+        font-style: italic;
+        line-height: 1.5;
+
+        h3 {
+            font-size: var(--font-h3);
+            font-style: italic;
+            color: core.$accent-color;
+            opacity: .25;
+        }
+
+        .title {
+            padding: 0 5rem;
+
+            h2 {
+                font-size: var(--font-h2);
+            }
+
+            h4 {
+                text-align: center;
+            }
+
+            span {
+                font-size: 1rem;
+                color: core.$accent-color;
+                opacity: .25;
+            }
+
+            .subtitle {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            @media (max-width: 70rem) {
+                padding: 0 5vw;
+
+                h2 {
+                    font-size: 5vw;
+                }
+
+                h3 {
+                    font-size: 4.5vw;
+                }
+
+                h4 {
+                    font-size: 3.75vw;
+                }
+
+                span {
+                    font-size: 3vw;
+                }
+            }
+        }
+    }
+
+    .link-icons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & > :not(:last-child) {
+            margin-bottom: 3rem;
+
+            @media (max-width: 90rem) {
+                margin-bottom: 0;
+                margin-right: 3rem;
+            }
+        }
+
+        a {
+            font-size: var(--font-h2);
+        }
+
+        @media (max-width: 90rem) {
+            flex-direction: row;
+            margin: 3rem 0;
+        }
+    }
+
+    @media (max-width: 90rem) {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+}

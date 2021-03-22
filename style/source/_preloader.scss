@@ -1,10 +1,12 @@
+@use 'core';
+
 .loader {
     display: flex;
     user-select: none;
     position: fixed;
-    background: var(--background);
-    color: #fff;
-    font-family: 'JetBrains Mono', monospace;
+    background: core.$background-color;
+    color: core.$white-color;
+    font-family: core.$heading-font;
     font-weight: bold;
     opacity: 1;
     width: 100%;
@@ -16,12 +18,12 @@
     overflow: hidden;
     transition: 1000ms;
     font-size: var(--font-h1);
-}
 
-.loader span {
-    color: var(--accent);
-}
+    span {
+        color: core.$accent-color;
+    }
 
-.loader.hidden {
-    opacity: 0;
+    &.hidden {
+        opacity: 0;
+    }
 }

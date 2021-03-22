@@ -1,0 +1,186 @@
+@use 'core';
+
+#skills {
+    .aligner {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .skills-wrapper {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        & > :not(:last-child) {
+            margin-right: 3rem;
+        }
+
+        .languages,
+        .frameworks,
+        .applications {
+            & > :not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+
+        h1 {
+            font-size: var(--font-h5);
+        }
+
+        .skill-item {
+            display: flex;
+            background: core.$black-color;
+            width: 20rem;
+            padding: 0.75rem 1rem;
+            font-size: var(--font-h6);
+            justify-content: space-between;
+            align-items: center;
+            font-family: core.$text-font;
+            transition: 500ms;
+
+            @media (max-width: 48rem) {
+                width: 15rem;
+            }
+
+            @media (max-width: 20rem) {
+                width: 12rem;
+
+                p {
+                    font-size: 0.75rem;
+                }
+            }
+
+            &[data-noob] {
+                .checkmark {
+                    color: core.$basic-color;
+                }
+            }
+
+            &[data-mid] {
+                .checkmark {
+                    color: core.$learning-color;
+                }
+            }
+
+            &[data-pro] {
+                .checkmark {
+                    color: core.$accent-color;
+                }
+            }
+        }
+
+        &.filtered {
+            .skill-item {
+                opacity: 0.25;
+                filter: grayscale(100%);
+                transform: scale(0.95);
+
+                &.selected {
+                    opacity: 1;
+                    filter: none;
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    .legend {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: var(--font-h6);
+        font-family: core.$text-font;
+
+        & > :not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
+
+        & > .legend-item {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 1rem;
+
+            .color-item {
+                width: 1.5rem;
+                height: 1.5rem;
+                background: core.$white-color;
+
+                &[data-noob] {
+                    background: core.$basic-color;
+                }
+
+                &[data-mid] {
+                    background: core.$learning-color;
+                }
+
+                &[data-pro] {
+                    background: core.$accent-color;
+                }
+            }
+
+            &.selected {
+                background: core.$black-color;
+
+                & > .clear-filter {
+                    display: initial;
+                }
+            }
+
+            & > .clear-filter {
+                display: none;
+
+                &:hover {
+                    color: core.$accent-color;
+                }
+            }
+
+            & > :not(:last-child) {
+                margin-right: 1.5rem;
+            }
+
+            &:hover {
+                background: core.$black-color;
+            }
+        }
+    }
+
+    & > :not(:last-child) {
+        margin-right: 3rem;
+    }
+
+    @media (max-width: 95rem) {
+        .aligner {
+            flex-direction: column-reverse;
+        }
+
+        .legend {
+            margin-bottom: 4rem;
+        }
+
+        .skills-wrapper {
+            flex-direction: column;
+            align-items: center;
+
+            & > :not(:last-child) {
+                margin-right: 0;
+                margin-bottom: 2rem;
+            }
+
+            &.languages,
+            &.frameworks,
+            &.applications {
+                & > :not(:last-child) {
+                    margin-bottom: 0;
+                }
+            }
+
+            .skill-item {
+                display: inline-flex;
+                margin: 0.5rem;
+            }
+        }
+    }
+}

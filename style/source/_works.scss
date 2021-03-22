@@ -1,0 +1,149 @@
+@use 'core';
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 1rem;
+    gap: 1rem;
+
+    .card {
+        height: 25rem;
+        position: relative;
+        scroll-snap-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-size: cover;
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .caption {
+            font-family: core.$text-font;
+            font-weight: 100;
+            position: absolute;
+            height: 25%;
+            backdrop-filter: blur(1.5rem);
+            background-color: rgba(0, 0, 0, 0.75);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--font-h4);
+            transition: 450ms;
+            padding: 2rem;
+            text-align: center;
+
+            a {
+                border-radius: 9999px;
+                font-family: core.$text-font;
+                font-weight: 400;
+                font-size: 1.25rem;
+                border: 2px solid core.$white-color;
+                padding: 1rem;
+                color: core.$white-color;
+                transition: 300ms;
+                display: none;
+
+                &:hover {
+                    color: core.$accent-color;
+                    border-color: core.$accent-color;
+                }
+            }
+
+            p {
+                font-size: var(--font-h6);
+                display: none;
+                text-align: center;
+                margin: 2rem;
+                flex: 1;
+                overflow: hidden;
+            }
+        }
+
+        &:hover {
+            .caption {
+                width: 100%;
+                height: 100%;
+
+                a {
+                    display: block;
+                }
+
+                h1 {
+                    color: core.$accent-color;
+                    font-size: var(--font-h2);
+                }
+
+                p {
+                    display: inline;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 48rem) {
+        display: flex;
+        flex-direction: column;
+        gap: initial;
+
+        & > :not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        .card {
+            width: 100%;
+            height: 60vmin;
+
+            .caption {
+                font-size: 4vw;
+
+                p {
+                    font-size: 3vw;
+                }
+
+                a {
+                    font-size: 3vw;
+                    border-width: 1px;
+                }
+            }
+
+            &:hover {
+                .caption h1 {
+                    font-size: 6vw;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 22rem) {
+        .card {
+            .caption {
+                justify-content: space-evenly;
+            }
+
+            &:hover {
+                .caption {
+                    p {
+                        display: none;
+                        overflow: hidden;
+                        margin: 0;
+                    }
+
+                    a {
+                        padding: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

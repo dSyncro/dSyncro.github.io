@@ -1,0 +1,94 @@
+@use 'core';
+
+footer {
+    font-family: core.$heading-font;
+    background: core.$black-color;
+    color: opacify(core.$white-color, .25);
+    font-style: italic;
+    font-size: var(--font-h4);
+    padding: 2rem;
+
+    .actual-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+
+        img {
+            width: 6rem;
+            height: 6rem;
+
+            @media (max-width: 48rem) {
+                margin-bottom: 3rem;
+            }
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                font-family: core.$heading-font;
+                color: core.$white-color;
+                font-style: normal;
+
+                @media (max-width: 48rem) {
+                    font-size: 2vmax;
+                } 
+            }
+
+            & > :not(:last-child) {
+                margin-bottom: 2rem;
+            }
+
+            .link-icons {
+                display: flex;
+                flex-direction: row;
+                font-size: var(--font-h2);
+                align-items: center;
+
+                & > :not(:last-child) {
+                    margin-right: 3rem;
+                }
+            }
+        }
+
+        .goto-top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                font-weight: 100;
+                color: core.$accent-color;
+                opacity: .25;
+                font-size: 1vmax;
+            }
+
+            a {
+                font-size: 2.5vmax;
+                padding: .5rem 2rem;
+            }
+
+            h3 {
+                line-height: 2;
+                color: core.$white-color;
+                font-weight: 100;
+                font-size: 1.5vmax;
+            }
+
+            @media (max-width: 70rem) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 70rem) {
+            justify-content: space-evenly;
+        }
+
+        @media (max-width: 48rem) {
+            flex-direction: column;
+        }
+    }
+}

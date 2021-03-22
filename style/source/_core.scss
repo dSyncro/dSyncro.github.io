@@ -1,6 +1,19 @@
-@import url('reset.css');
-@import url('utility.css');
+@use 'reset';
+@use 'utility';
+@use 'customScrollbar';
+
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;300;400&family=Montserrat:wght@100;400;700&display=swap');
+
+$heading-font: 'JetBrains Mono', monospace;
+$text-font: 'Montserrat', sans-serif;
+
+$background-color: #121212;
+$accent-color: #00FFA4;
+$learning-color: #FF9900;
+$basic-color: #fff;
+
+$black-color: #000;
+$white-color: #fff;
 
 * {
     box-sizing: border-box;
@@ -9,14 +22,6 @@
 :root {
     font-size: 16px;
 
-    --background: #121212;
-    --accent: #00FFA4;
-    --orange: #FF9900;
-    --red: #FF003D;
-
-    --heading-font: 'JetBrains Mono', monospace;
-    --text-font: 'Montserrat', sans-serif;
-
     --font-p: 1rem;
     --font-h6: 1.5rem;
     --font-h5: 1.75rem;
@@ -24,10 +29,8 @@
     --font-h3: 2.5rem;
     --font-h2: 3rem;
     --font-h1: 3.5rem;
-}
 
-@media (max-width: 70rem) {
-    :root {
+    @media (max-width: 70rem) {
         --font-p: .75rem;
         --font-h6: 1rem;
         --font-h5: 1.25rem;
@@ -35,7 +38,7 @@
         --font-h3: 2rem;
         --font-h2: 2.5rem;
         --font-h1: 3rem;
-    }  
+    }
 }
 
 a {
@@ -73,6 +76,6 @@ h1 {
 */
 
 ::selection {
-    color: var(--background);
-    background: #fff;
+    color: $background-color;
+    background: $white-color;
 }
