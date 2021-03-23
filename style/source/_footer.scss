@@ -3,7 +3,7 @@
 footer {
     font-family: core.$heading-font;
     background: var(--black-color);
-    color: rgba(var(--white-color-rgb), .5);
+    color: rgba(var(--white-color-rgb), 0.5);
     font-style: italic;
     font-size: var(--font-h4);
     padding: 2rem;
@@ -17,10 +17,6 @@ footer {
         img {
             width: 6rem;
             height: 6rem;
-
-            @media (max-width: 48rem) {
-                margin-bottom: 3rem;
-            }
         }
 
         .content {
@@ -32,10 +28,6 @@ footer {
                 font-family: core.$heading-font;
                 color: var(--white-color);
                 font-style: normal;
-
-                @media (max-width: 48rem) {
-                    font-size: 2vmax;
-                } 
             }
 
             & > :not(:last-child) {
@@ -62,13 +54,13 @@ footer {
             p {
                 font-weight: 100;
                 color: core.$accent-color;
-                opacity: .25;
+                opacity: 0.25;
                 font-size: 1vmax;
             }
 
             a {
                 font-size: 2.5vmax;
-                padding: .5rem 2rem;
+                padding: 0.5rem 2rem;
             }
 
             h3 {
@@ -77,18 +69,26 @@ footer {
                 font-weight: 100;
                 font-size: 1.5vmax;
             }
-
-            @media (max-width: 70rem) {
-                display: none;
-            }
         }
 
         @media (max-width: 70rem) {
             justify-content: space-evenly;
+
+            .goto-top {
+                display: none;
+            }
         }
 
         @media (max-width: 48rem) {
             flex-direction: column;
+
+            img {
+                margin-bottom: 3rem;
+            }
+
+            .content p {
+                font-size: 2vmax;
+            }
         }
     }
 }

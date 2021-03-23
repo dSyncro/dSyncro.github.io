@@ -547,14 +547,14 @@ nav.opaque {
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(var(--black-color-rgb), 0.95);
   z-index: 10000;
   padding: 8vmin;
   font-style: italic;
   font-size: var(--font-h2);
-  opacity: 0;
   pointer-events: none;
   transition: 500ms;
+  opacity: 0;
 }
 #contact-me.shown {
   opacity: 1;
@@ -630,108 +630,100 @@ nav.opaque {
   border-color: #00FFA4;
 }
 
-#main {
+#header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100vh;
   padding: 2rem 0;
 }
-#main img {
+#header img {
   width: 25%;
   padding: 3rem;
   height: auto;
 }
-@media (max-width: 70rem) {
-  #main img {
-    width: 35vmax;
-    height: 35vmax;
-  }
-}
-#main .heading-wrapper {
+#header .heading-wrapper {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-@media (max-width: 70rem) {
-  #main .heading-wrapper {
-    flex-direction: column;
-  }
-}
-#main .heading {
+#header .heading {
   font-style: italic;
   line-height: 1.5;
 }
-#main .heading h3 {
+#header .heading h3 {
   font-size: var(--font-h3);
   font-style: italic;
   color: #00FFA4;
   opacity: 0.25;
 }
-#main .heading .title {
+#header .heading .title {
   padding: 0 5rem;
 }
-#main .heading .title h2 {
+#header .heading .title h2 {
   font-size: var(--font-h2);
 }
-#main .heading .title h4 {
+#header .heading .title h4 {
   text-align: center;
 }
-#main .heading .title span {
+#header .heading .title span {
   font-size: 1rem;
   color: #00FFA4;
   opacity: 0.25;
 }
-#main .heading .title .subtitle {
+#header .heading .title .subtitle {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-@media (max-width: 70rem) {
-  #main .heading .title {
-    padding: 0 5vw;
-  }
-  #main .heading .title h2 {
-    font-size: 5vw;
-  }
-  #main .heading .title h3 {
-    font-size: 4.5vw;
-  }
-  #main .heading .title h4 {
-    font-size: 3.75vw;
-  }
-  #main .heading .title span {
-    font-size: 3vw;
-  }
-}
-#main .link-icons {
+#header .link-icons {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#main .link-icons > :not(:last-child) {
+#header .link-icons > :not(:last-child) {
   margin-bottom: 3rem;
 }
+#header .link-icons a {
+  font-size: var(--font-h2);
+}
 @media (max-width: 90rem) {
-  #main .link-icons > :not(:last-child) {
+  #header {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+  #header .link-icons {
+    flex-direction: row;
+    margin: 3rem 0;
+  }
+  #header .link-icons > :not(:last-child) {
     margin-bottom: 0;
     margin-right: 3rem;
   }
 }
-#main .link-icons a {
-  font-size: var(--font-h2);
-}
-@media (max-width: 90rem) {
-  #main .link-icons {
-    flex-direction: row;
-    margin: 3rem 0;
+@media (max-width: 70rem) {
+  #header img {
+    width: 35vmax;
+    height: 35vmax;
   }
-}
-@media (max-width: 90rem) {
-  #main {
-    flex-direction: column-reverse;
-    justify-content: space-between;
+  #header .heading-wrapper {
+    flex-direction: column;
+  }
+  #header .heading .title {
+    padding: 0 5vw;
+  }
+  #header .heading .title h2 {
+    font-size: 5vw;
+  }
+  #header .heading .title h3 {
+    font-size: 4.5vw;
+  }
+  #header .heading .title h4 {
+    font-size: 3.75vw;
+  }
+  #header .heading .title span {
+    font-size: 3vw;
   }
 }
 
@@ -989,12 +981,6 @@ nav.opaque {
     height: 12rem;
   }
 }
-@media (max-width: 48rem) {
-  #is img {
-    margin-left: 0;
-    margin-bottom: 2rem;
-  }
-}
 #is .presentation {
   display: flex;
   width: 100%;
@@ -1004,6 +990,10 @@ nav.opaque {
   padding: 0 5%;
 }
 @media (max-width: 48rem) {
+  #is img {
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
   #is .presentation {
     flex-direction: column;
   }
@@ -1284,11 +1274,6 @@ footer .actual-footer img {
   width: 6rem;
   height: 6rem;
 }
-@media (max-width: 48rem) {
-  footer .actual-footer img {
-    margin-bottom: 3rem;
-  }
-}
 footer .actual-footer .content {
   display: flex;
   flex-direction: column;
@@ -1298,11 +1283,6 @@ footer .actual-footer .content p {
   font-family: "JetBrains Mono", monospace;
   color: var(--white-color);
   font-style: normal;
-}
-@media (max-width: 48rem) {
-  footer .actual-footer .content p {
-    font-size: 2vmax;
-  }
 }
 footer .actual-footer .content > :not(:last-child) {
   margin-bottom: 2rem;
@@ -1338,18 +1318,22 @@ footer .actual-footer .goto-top h3 {
   font-size: 1.5vmax;
 }
 @media (max-width: 70rem) {
-  footer .actual-footer .goto-top {
-    display: none;
-  }
-}
-@media (max-width: 70rem) {
   footer .actual-footer {
     justify-content: space-evenly;
+  }
+  footer .actual-footer .goto-top {
+    display: none;
   }
 }
 @media (max-width: 48rem) {
   footer .actual-footer {
     flex-direction: column;
+  }
+  footer .actual-footer img {
+    margin-bottom: 3rem;
+  }
+  footer .actual-footer .content p {
+    font-size: 2vmax;
   }
 }
 
