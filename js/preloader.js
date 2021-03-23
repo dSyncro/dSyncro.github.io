@@ -13,5 +13,5 @@ let interval = setInterval(() => {
 window.addEventListener('load', () => {
     preloader.classList.add('hidden');
     setTimeout(() => { preloader.remove(); }, 1000);
-    document.querySelector('body').classList.remove('no-scroll');
+    document.body.classList.remove('no-scroll');
 });

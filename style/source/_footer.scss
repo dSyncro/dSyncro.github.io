@@ -2,8 +2,8 @@
 
 footer {
     font-family: core.$heading-font;
-    background: core.$black-color;
-    color: opacify(core.$white-color, .25);
+    background: var(--black-color);
+    color: rgba(var(--white-color-rgb), .5);
     font-style: italic;
     font-size: var(--font-h4);
     padding: 2rem;
@@ -30,7 +30,7 @@ footer {
 
             p {
                 font-family: core.$heading-font;
-                color: core.$white-color;
+                color: var(--white-color);
                 font-style: normal;
 
                 @media (max-width: 48rem) {
@@ -73,7 +73,7 @@ footer {
 
             h3 {
                 line-height: 2;
-                color: core.$white-color;
+                color: var(--white-color);
                 font-weight: 100;
                 font-size: 1.5vmax;
             }

@@ -1,11 +1,12 @@
 @use 'core';
 
 .loader {
+    text-align: center;
     display: flex;
     user-select: none;
     position: fixed;
-    background: core.$background-color;
-    color: core.$white-color;
+    background: var(--background-color);
+    color: var(--white-color);
     font-family: core.$heading-font;
     font-weight: bold;
     opacity: 1;

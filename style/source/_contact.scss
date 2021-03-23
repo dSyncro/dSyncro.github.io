@@ -1,17 +1,25 @@
 @use 'core';
 
 #contact-me {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    background: opacify(core.$black-color, .95);
+    background: rgba(0, 0, 0, 0.95);
     z-index: 10000;
     padding: 8vmin;
     font-style: italic;
     font-size: var(--font-h2);
+    opacity: 0;
+    pointer-events: none;
+    transition: 500ms;
+
+    &.shown {
+        opacity: 1;
+        pointer-events: auto;
+    }
 
     .heading {
         display: flex;
@@ -36,7 +44,7 @@
         flex-direction: column;
 
         ::placeholder {
-            color: core.$white-color;
+            color: var(--white-color);
             opacity: 0.5;
         }
 
@@ -45,13 +53,15 @@
         }
     }
 
-    input[type="text"], input[type="email"], textarea {
+    input[type="text"],
+    input[type="email"],
+    textarea {
         caret-color: core.$accent-color;
-        color: core.$white-color;
+        color: var(--white-color);
         font-family: core.$heading-font;
         font-weight: 400;
-        background: core.$background-color;
-        font-size: 3vmin;
+        background: var(--background-color);
+        font-size: var(--font-h5);
         border: none;
         padding: 1rem 2rem;
         transition: 350ms;
@@ -69,13 +79,13 @@
 
     button {
         padding: 4vmin;
-        font-family: core.$heading-color;
+        font-family: core.$heading-font;
         font-size: var(--font-h6);
-        color: core.$white-color;
-        border: 2px solid core.$white-color;
+        color: var(--white-color);
+        border: 2px solid var(--white-color);
         background: transparent;
         transition: 350ms;
-        background: core.$black-color;
+        background: var(--black-color);
         margin-top: 6vmin;
 
         &:focus {
@@ -85,12 +95,8 @@
 
         &:hover {
             background: core.$accent-color;
-            color: core.$black-color;
+            color: var(--black-color);
             border-color: core.$accent-color;
         }
-    }
-
-    @media (max-width: 22rem) {
-        font-size: 2rem;
     }
 }

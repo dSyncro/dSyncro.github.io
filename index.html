@@ -6,6 +6,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link
+		href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;300;400&family=Montserrat:wght@100;400;700&display=swap"
+		rel="stylesheet">
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
 		integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
 		crossorigin="anonymous" />
@@ -31,7 +36,7 @@
 		</h1>
 	</div>
 
-	<!--div id="contact-me">
+	<div id="contact-me">
 		<div class="heading">
 			<p>&lt;form&gt;</p>
 			<i class="fas fa-times"></i>
@@ -43,7 +48,7 @@
 			<button type="submit" class="rounded">Submit</button>
 		</form>
 		<p>&lt;/form&gt;</p>
-	</div-->
+	</div>
 
 	<img class="background-logo" src="img/dSyncro.png" alt="Background Logo"></img>
 
@@ -59,7 +64,8 @@
 			<li><a id="is-link">.is()</a></li>
 			<li><a id="works-link">.works()</a></li>
 			<li><a id="skills-link">.skills()</a></li>
-			<li><a onclick="alert('Not available yet! Contact me on Instagram or Github!')">.contact()</a></li>
+			<li><a id="contact-link">.contact()</a></li>
+			<li><a><i class="far fa-lightbulb"></i></a></li>
 		</ul>
 	</nav>
 
@@ -73,7 +79,7 @@
 			</div>
 
 			<div class="heading-wrapper">
-				<img src="img/dSyncro.png" alt="dSyncro Logo">
+				<img src="img/dSyncro.png" alt="dSyncro Logo" class="logo">
 
 				<div class="heading">
 					<h3>&lt;h1&gt;</h3>
@@ -354,7 +360,7 @@
 	<footer>
 		<p>&lt;footer&gt;</p>
 		<div class="actual-footer">
-			<a href="#"><img src="img/dSyncro.png" alt="dSyncro Logo"></a>
+			<a href="#"><img src="img/dSyncro.png" alt="dSyncro Logo" class="logo"></a>
 			<div class="content">
 				<div class="link-icons">
 					<a href="https://www.instagram.com/not.domenico/"><i class="fab fa-instagram"></i></a>
@@ -376,10 +382,13 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/5.3.0/simplebar.min.js"
 		integrity="sha512-AS9rZZDdb+y4W2lcmkNGwf4swm6607XJYpNST1mkNBUfBBka8btA6mgRmhoFQ9Umy8Nj/fg5444+SglLHbowuA=="
 		crossorigin="anonymous"></script>
+
 	<script src="js/navbar.js"></script>
 	<script src="js/scrollIntoView.js"></script>
 	<script src="js/skillsSelector.js"></script>
 	<script src="js/preloader.js"></script>
+	<script src="js/contactForm.js"></script>
+	<script src="js/darkModeSwitch.js"></script>
 </body>
 
 </html>

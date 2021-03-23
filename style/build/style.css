@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;300;400&family=Montserrat:wght@100;400;700&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -354,6 +353,11 @@ textarea {
 
 :root {
   font-size: 16px;
+  --background-color: #121212;
+  --white-color: #fff;
+  --black-color: #000;
+  --white-color-rgb: 255, 255, 255;
+  --black-color-rgb: 0, 0, 0;
   --font-p: 1rem;
   --font-h6: 1.5rem;
   --font-h5: 1.75rem;
@@ -408,16 +412,25 @@ h1 {
 }
 */
 ::selection {
-  color: #121212;
-  background: #fff;
+  color: var(--background-color);
+  background: var(--white-color);
+}
+
+.light-mode {
+  --background-color: #ededed;
+  --white-color: #000;
+  --black-color: #fff;
+  --white-color-rgb: 0, 0, 0;
+  --black-color-rgb: 255, 255, 255;
 }
 
 .loader {
+  text-align: center;
   display: flex;
   user-select: none;
   position: fixed;
-  background: #121212;
-  color: #fff;
+  background: var(--background-color);
+  color: var(--white-color);
   font-family: "JetBrains Mono", monospace;
   font-weight: bold;
   opacity: 1;
@@ -442,31 +455,19 @@ nav {
   position: fixed;
   width: 100vw;
   padding: 2rem 5%;
-  color: #fff;
+  color: var(--white-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 9999;
   transition: 450ms;
 }
-@media (max-width: 75rem) {
-  nav {
-    flex-direction: column;
-    background: black;
-    backdrop-filter: blur(1.5rem);
-  }
-}
 nav h1 {
   user-select: none;
-  font-size: 2rem;
+  font-size: var(--font-h4);
 }
 nav h1::before {
   content: "{} Domenico Mancini";
-}
-@media (max-width: 75rem) {
-  nav h1::before {
-    content: "{DM}";
-  }
 }
 nav ul {
   font-weight: 100;
@@ -475,24 +476,32 @@ nav ul {
 nav ul > :not(:last-child) {
   margin-right: 2rem;
 }
-@media (max-width: 75rem) {
-  nav ul > :not(:last-child) {
-    width: 100%;
-    margin-right: 0;
-  }
-}
 nav ul li a {
   font-size: var(--font-h6);
 }
-@media (max-width: 75rem) {
-  nav ul li a {
-    padding: 1rem;
-    width: 100%;
-    display: block;
-    transition: 450ms;
-  }
+nav .navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .hamburger-menu {
+  font-size: var(--font-h4);
+  display: none;
+}
+nav.opaque {
+  background: rgba(var(--black-color-rgb), 0.5);
+  backdrop-filter: blur(1.5rem);
 }
 @media (max-width: 75rem) {
+  nav {
+    flex-direction: column;
+    background: rgba(var(--black-color-rgb), 0.5);
+    backdrop-filter: blur(1.5rem);
+    padding: 1rem;
+  }
+  nav h1::before {
+    content: "{DM}";
+  }
   nav ul {
     margin-top: 2rem;
     width: 100%;
@@ -500,46 +509,125 @@ nav ul li a {
     text-align: center;
     display: none;
   }
-  nav ul a:hover {
-    color: #000;
+  nav ul.shown {
+    display: block;
+  }
+  nav ul > :not(:last-child) {
+    width: 100%;
+    margin-right: 0;
+  }
+  nav ul li a {
+    padding: 1rem;
+    width: 100%;
+    display: block;
+    transition: 450ms;
+  }
+  nav ul li a:hover {
+    color: var(--black-color);
     background: #00FFA4;
     font-weight: 400;
     transform: scale(1.1);
   }
-}
-@media (max-width: 75rem) {
-  nav ul.shown {
-    display: block;
-  }
-}
-nav .navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-@media (max-width: 75rem) {
   nav .navigation {
     width: 100%;
   }
-}
-nav .hamburger-menu {
-  font-size: 2rem;
-  display: none;
-}
-@media (max-width: 75rem) {
   nav .hamburger-menu {
     display: block;
     transition: 300ms;
   }
-}
-@media (max-width: 75rem) {
   nav .hamburger-menu:hover {
     color: #00FFA4;
   }
 }
-nav.opaque {
-  background: black;
-  backdrop-filter: blur(1.5rem);
+
+#contact-me {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 10000;
+  padding: 8vmin;
+  font-style: italic;
+  font-size: var(--font-h2);
+  opacity: 0;
+  pointer-events: none;
+  transition: 500ms;
+}
+#contact-me.shown {
+  opacity: 1;
+  pointer-events: auto;
+}
+#contact-me .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#contact-me p {
+  opacity: 0.5;
+}
+#contact-me i {
+  transition: 350ms;
+}
+#contact-me i:hover {
+  color: #00FFA4;
+}
+#contact-me form {
+  padding: 2vmin;
+  display: flex;
+  flex-direction: column;
+}
+#contact-me form ::placeholder {
+  color: var(--white-color);
+  opacity: 0.5;
+}
+#contact-me form > :not(:last-child) {
+  margin-bottom: 2vmin;
+}
+#contact-me input[type=text],
+#contact-me input[type=email],
+#contact-me textarea {
+  caret-color: #00FFA4;
+  color: var(--white-color);
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 400;
+  background: var(--background-color);
+  font-size: var(--font-h5);
+  border: none;
+  padding: 1rem 2rem;
+  transition: 350ms;
+}
+#contact-me input[type=text]:focus,
+#contact-me input[type=email]:focus,
+#contact-me textarea:focus {
+  border: 2px solid #00FFA4;
+}
+#contact-me textarea {
+  min-height: 30vh;
+  border-radius: 2rem;
+  resize: none;
+}
+#contact-me button {
+  padding: 4vmin;
+  font-family: "JetBrains Mono", monospace;
+  font-size: var(--font-h6);
+  color: var(--white-color);
+  border: 2px solid var(--white-color);
+  background: transparent;
+  transition: 350ms;
+  background: var(--black-color);
+  margin-top: 6vmin;
+}
+#contact-me button:focus {
+  border: 2px solid #00FFA4;
+  color: #00FFA4;
+}
+#contact-me button:hover {
+  background: #00FFA4;
+  color: var(--black-color);
+  border-color: #00FFA4;
 }
 
 #main {
@@ -662,12 +750,12 @@ nav.opaque {
   margin-top: 1.5rem;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.5rem;
-  color: #fff;
+  color: var(--white-color);
   -webkit-animation: colorText 5s ease-out infinite, nudgeText 5s ease-out infinite;
   animation: colorText 5s ease-out infinite, nudgeText 5s ease-out infinite;
 }
 .mouse-wrapper .mouse {
-  background: #4e5559 linear-gradient(transparent 0%, transparent 50%, #fff 50%, #fff 100%);
+  background: #4e5559 linear-gradient(transparent 0%, transparent 50%, var(--white-color) 50%, var(--white-color) 100%);
   position: relative;
   width: 26px;
   height: 44px;
@@ -687,11 +775,11 @@ nav.opaque {
 .mouse-wrapper .mouse:before {
   width: 23px;
   height: 41px;
-  background-color: #121212;
+  background-color: var(--background-color);
   border-radius: 100px;
 }
 .mouse-wrapper .mouse:after {
-  background-color: #fff;
+  background-color: var(--white-color);
   width: 5px;
   height: 5px;
   border-radius: 100%;
@@ -709,7 +797,7 @@ nav.opaque {
     background-color: #4e5559;
   }
   29.99% {
-    background-color: #fff;
+    background-color: var(--white-color);
     background-position: 0% 0%;
   }
   30% {
@@ -723,7 +811,7 @@ nav.opaque {
     background-color: #4e5559;
   }
   59% {
-    background-color: #fff;
+    background-color: var(--white-color);
     background-position: 0% 0%;
   }
   60% {
@@ -737,7 +825,7 @@ nav.opaque {
     background-color: #4e5559;
   }
   90%, 100% {
-    background-color: #fff;
+    background-color: var(--white-color);
   }
 }
 @keyframes trackBallSlide {
@@ -853,19 +941,19 @@ nav.opaque {
     color: #4e5559;
   }
   30% {
-    color: #fff;
+    color: var(--white-color);
   }
   51% {
     color: #4e5559;
   }
   60% {
-    color: #fff;
+    color: var(--white-color);
   }
   81% {
     color: #4e5559;
   }
   90% {
-    color: #fff;
+    color: var(--white-color);
   }
 }
 @media (max-width: 90rem) {
@@ -950,7 +1038,7 @@ nav.opaque {
   position: absolute;
   height: 25%;
   backdrop-filter: blur(1.5rem);
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(var(--black-color-rgb), 0.75);
   left: 0;
   right: 0;
   bottom: 0;
@@ -968,9 +1056,9 @@ nav.opaque {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
-  border: 2px solid #fff;
+  border: 2px solid var(--white-color);
   padding: 1rem;
-  color: #fff;
+  color: var(--white-color);
   transition: 300ms;
   display: none;
 }
@@ -1064,7 +1152,7 @@ nav.opaque {
 }
 #skills .skills-wrapper .skill-item {
   display: flex;
-  background: #000;
+  background: var(--black-color);
   width: 20rem;
   padding: 0.75rem 1rem;
   font-size: var(--font-h6);
@@ -1087,7 +1175,7 @@ nav.opaque {
   }
 }
 #skills .skills-wrapper .skill-item[data-noob] .checkmark {
-  color: #fff;
+  color: #ffeb94;
 }
 #skills .skills-wrapper .skill-item[data-mid] .checkmark {
   color: #FF9900;
@@ -1125,10 +1213,10 @@ nav.opaque {
 #skills .legend > .legend-item .color-item {
   width: 1.5rem;
   height: 1.5rem;
-  background: #fff;
+  background: var(--white-color);
 }
 #skills .legend > .legend-item .color-item[data-noob] {
-  background: #fff;
+  background: #ffeb94;
 }
 #skills .legend > .legend-item .color-item[data-mid] {
   background: #FF9900;
@@ -1137,7 +1225,7 @@ nav.opaque {
   background: #00FFA4;
 }
 #skills .legend > .legend-item.selected {
-  background: #000;
+  background: var(--black-color);
 }
 #skills .legend > .legend-item.selected > .clear-filter {
   display: initial;
@@ -1152,10 +1240,7 @@ nav.opaque {
   margin-right: 1.5rem;
 }
 #skills .legend > .legend-item:hover {
-  background: #000;
-}
-#skills > :not(:last-child) {
-  margin-right: 3rem;
+  background: var(--black-color);
 }
 @media (max-width: 95rem) {
   #skills .aligner {
@@ -1183,8 +1268,8 @@ nav.opaque {
 
 footer {
   font-family: "JetBrains Mono", monospace;
-  background: #000;
-  color: white;
+  background: var(--black-color);
+  color: rgba(var(--white-color-rgb), 0.5);
   font-style: italic;
   font-size: var(--font-h4);
   padding: 2rem;
@@ -1211,7 +1296,7 @@ footer .actual-footer .content {
 }
 footer .actual-footer .content p {
   font-family: "JetBrains Mono", monospace;
-  color: #fff;
+  color: var(--white-color);
   font-style: normal;
 }
 @media (max-width: 48rem) {
@@ -1248,7 +1333,7 @@ footer .actual-footer .goto-top a {
 }
 footer .actual-footer .goto-top h3 {
   line-height: 2;
-  color: #fff;
+  color: var(--white-color);
   font-weight: 100;
   font-size: 1.5vmax;
 }
@@ -1278,14 +1363,14 @@ body {
   width: 100%;
   height: 100%;
   font-family: "JetBrains Mono", monospace;
-  color: #fff;
-  background: #121212;
+  color: var(--white-color);
+  background: var(--background-color);
   scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: var(--white-color);
   transition: 350ms;
 }
 a:hover {
@@ -1301,6 +1386,11 @@ header {
 }
 header::before {
   content: "";
+}
+
+.light-mode .logo,
+.light-mode .background-logo {
+  filter: invert(1);
 }
 
 .background-logo {

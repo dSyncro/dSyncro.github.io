@@ -4,29 +4,19 @@ nav {
     position: fixed;
     width: 100vw;
     padding: 2rem 5%;
-    color: core.$white-color;
+    color: var(--white-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 9999;
     transition: 450ms;
 
-    @media (max-width: 75rem) {
-        flex-direction: column;
-        background: opacify(core.$black-color, 0.5);
-        backdrop-filter: blur(1.5rem);
-    }
-
     h1 {
         user-select: none;
-        font-size: 2rem;
+        font-size: var(--font-h4);
 
         &::before {
             content: "{} Domenico Mancini";
-
-            @media (max-width: 75rem) {
-                content: "{DM}";
-            }
         }
     }
 
@@ -36,45 +26,10 @@ nav {
 
         & > :not(:last-child) {
             margin-right: 2rem;
-
-            @media (max-width: 75rem) {
-                width: 100%;
-                margin-right: 0;
-            }
         }
 
-        li {
-            a {
-                font-size: var(--font-h6);
-
-                @media (max-width: 75rem) {
-                    padding: 1rem;
-                    width: 100%;
-                    display: block;
-                    transition: 450ms;
-                }
-            }
-        }
-
-        @media (max-width: 75rem) {
-            margin-top: 2rem;
-            width: 100%;
-            flex-direction: column;
-            text-align: center;
-            display: none;
-
-            a:hover {
-                color: core.$black-color;
-                background: core.$accent-color;
-                font-weight: 400;
-                transform: scale(1.1);
-            }
-        }
-
-        &.shown {
-            @media (max-width: 75rem) {
-                display: block;
-            }
+        li a {
+            font-size: var(--font-h6);
         }
     }
 
@@ -82,30 +37,70 @@ nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        @media (max-width: 75rem) {
-            width: 100%;
-        }
     }
 
     .hamburger-menu {
-        font-size: 2rem;
+        font-size: var(--font-h4);
         display: none;
-
-        @media (max-width: 75rem) {
-            display: block;
-            transition: 300ms;
-        }
-
-        &:hover {
-            @media (max-width: 75rem) {
-                color: core.$accent-color;
-            }
-        }
     }
 
     &.opaque {
-        background: opacify(core.$black-color, 0.5);
+        background: rgba(var(--black-color-rgb), .5);
         backdrop-filter: blur(1.5rem);
+    }
+
+    @media (max-width: 75rem) {
+        flex-direction: column;
+        background: rgba(var(--black-color-rgb), .5);
+        backdrop-filter: blur(1.5rem);
+        padding: 1rem;
+
+        h1::before {
+            content: "{DM}";
+        }
+
+        ul {
+            margin-top: 2rem;
+            width: 100%;
+            flex-direction: column;
+            text-align: center;
+            display: none;
+
+            &.shown {
+                display: block;
+            }
+
+            > :not(:last-child) {
+                width: 100%;
+                margin-right: 0;
+            }
+
+            li a {
+                padding: 1rem;
+                width: 100%;
+                display: block;
+                transition: 450ms;
+
+                &:hover {
+                    color: var(--black-color);
+                    background: core.$accent-color;
+                    font-weight: 400;
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .navigation {
+            width: 100%;
+        }
+
+        .hamburger-menu {
+            display: block;
+            transition: 300ms;
+
+            &:hover {
+                color: core.$accent-color;
+            }
+        }
     }
 }

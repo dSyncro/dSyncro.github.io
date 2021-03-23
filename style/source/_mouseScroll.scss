@@ -1,7 +1,7 @@
 @use 'core';
 
-$colorBg: core.$background-color;
-$colorOutline: core.$white-color;
+$colorBg: var(--background-color);
+$colorOutline: var(--white-color);
 $colorOutlineFade: #4e5559;
 
 $widthMouse: 26px;

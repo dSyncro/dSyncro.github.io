@@ -30,7 +30,7 @@
 
         .skill-item {
             display: flex;
-            background: core.$black-color;
+            background: var(--black-color);
             width: 20rem;
             padding: 0.75rem 1rem;
             font-size: var(--font-h6);
@@ -106,7 +106,7 @@
             .color-item {
                 width: 1.5rem;
                 height: 1.5rem;
-                background: core.$white-color;
+                background: var(--white-color);
 
                 &[data-noob] {
                     background: core.$basic-color;
@@ -122,7 +122,7 @@
             }
 
             &.selected {
-                background: core.$black-color;
+                background: var(--black-color);
 
                 & > .clear-filter {
                     display: initial;
@@ -142,13 +142,9 @@
             }
 
             &:hover {
-                background: core.$black-color;
+                background: var(--black-color);
             }
         }
-    }
-
-    & > :not(:last-child) {
-        margin-right: 3rem;
     }
 
     @media (max-width: 95rem) {
