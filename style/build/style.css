@@ -638,7 +638,8 @@ nav.opaque {
   padding: 2rem 0;
 }
 #header img {
-  width: 25%;
+  width: 25rem;
+  height: 25rem;
   padding: 3rem;
   height: auto;
 }
@@ -692,6 +693,10 @@ nav.opaque {
   #header {
     flex-direction: column-reverse;
     justify-content: space-between;
+  }
+  #header img {
+    width: 20rem;
+    height: 20rem;
   }
   #header .link-icons {
     flex-direction: row;

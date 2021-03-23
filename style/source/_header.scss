@@ -8,7 +8,8 @@
     padding: 2rem 0;
 
     img {
-        width: 25%;
+        width: 25rem;
+        height: 25rem;
         padding: 3rem;
         height: auto;
     }
@@ -73,6 +74,11 @@
     @media (max-width: 90rem) {
         flex-direction: column-reverse;
         justify-content: space-between;
+
+        img {
+            width: 20rem;
+            height: 20rem;
+        }
 
         .link-icons {
             flex-direction: row;
