@@ -6,6 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<meta name="description"
+		content="Domenico Mancini portfolio, full stack web developer from Italy. Working with html, js, css, php, react.">
+
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 
 	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Montserrat&display=swap" rel="stylesheet"
@@ -53,44 +56,45 @@
 
 	<nav>
 		<div class="navigation">
-			<a id="dm">
+			<a href="#top" id="dm">
 				<h1></h1>
 			</a>
 			<i class="fas fa-code hamburger-menu"></i>
 		</div>
 
 		<ul>
-			<li><a id="is-link">.is()</a></li>
-			<li><a id="works-link">.works()</a></li>
-			<li><a id="skills-link">.skills()</a></li>
-			<li><a id="contact-link">.contact()</a></li>
-			<li><a><i class="far fa-lightbulb"></i></a></li>
+			<li><a href="#is" id="is-link">.is()</a></li>
+			<li><a href="#works" id="works-link">.works()</a></li>
+			<li><a href="#skills" id="skills-link">.skills()</a></li>
+			<li><a href="#contact-me" id="contact-link">.contact()</a></li>
+			<li><i class="far fa-lightbulb"></i></li>
 		</ul>
 	</nav>
 
-	<header>
+	<header id="top">
 		<section id="header">
 
 			<div class="link-icons">
-				<a href="https://www.instagram.com/not.domenico/"><i class="fab fa-instagram"></i></a>
-				<a href="https://github.com/dSyncro"><i class="fab fa-github"></i></a>
-				<a href="https://www.twitch.tv/dsyncro"><i class="fab fa-twitch"></i></a>
+				<a href="https://www.instagram.com/not.domenico/" aria-label="Instagram"><i
+						class="fab fa-instagram"></i></a>
+				<a href="https://github.com/dSyncro" aria-label="Github"><i class="fab fa-github"></i></a>
+				<a href="https://www.twitch.tv/dsyncro" aria-label="Twitch"><i class="fab fa-twitch"></i></a>
 			</div>
 
 			<div class="heading-wrapper">
 				<img width="400" height="400" src="img/dSyncro.png" alt="dSyncro Logo" class="logo">
 
 				<div class="heading">
-					<h3>&lt;h1&gt;</h3>
+					<p>&lt;h1&gt;</p>
 					<div class="title">
 						<h2>I am Domenico Mancini</h2>
 						<div class="subtitle">
 							<span>&lt;span&gt;</span>
-							<h4>A Full Stack Developer</h4>
+							<h3>A Full Stack Developer</h3>
 							<span>&lt;/span&gt;</span>
 						</div>
 					</div>
-					<h3>&lt;/h1&gt;</h3>
+					<p>&lt;/h1&gt;</p>
 				</div>
 			</div>
 		</section>
@@ -134,11 +138,12 @@
 
 			<div class="works-grid">
 				<div class="card">
-					<img srcset="img/thisWebsite-48rem.jpg 768w, img/thisWebsite-pp.jpg 1920w, img/thisWebsite.jpg" alt="This Website">
+					<img srcset="img/thisWebsite-48rem.jpg 768w, img/thisWebsite-pp.jpg 1920w, img/thisWebsite.jpg"
+						alt="This Website">
 					<div class="caption">
 						<h1>This Website</h1>
 						<p>You would never ever tell it, right?</p>
-						<a href="#">See More <i class="fas fa-chevron-right fa-xs"></i></a>
+						<a href="#" aria-label="This website itself">Visit This Website <i class="fas fa-chevron-right fa-xs" style="margin-left: 0.25rem;"></i></a>
 					</div>
 				</div>
 				<div class="card">
@@ -149,8 +154,8 @@
 							A website about my town that I made for a student internship program in which I was
 							responsible for the web design.
 						</p>
-						<a href="https://mottolapcto.altervista.org/">See More <i
-								class="fas fa-chevron-right fa-xs"></i></a>
+						<a href="https://mottolapcto.altervista.org/" aria-label="Mottola pcto website project">Visit Mottola PCTO <i
+								class="fas fa-chevron-right fa-xs" style="margin-left: 0.25rem;"></i></a>
 					</div>
 				</div>
 			</div>
@@ -362,22 +367,23 @@
 			<a href="#"><img src="img/dSyncro.png" alt="dSyncro Logo - Footer" class="logo"></a>
 			<div class="content">
 				<div class="link-icons">
-					<a href="https://www.instagram.com/not.domenico/"><i class="fab fa-instagram"></i></a>
-					<a href="https://github.com/dSyncro"><i class="fab fa-github"></i></a>
-					<a href="https://www.twitch.tv/dsyncro"><i class="fab fa-twitch"></i></a>
+					<a href="https://www.instagram.com/not.domenico/" aria-label="Instagram"><i
+							class="fab fa-instagram"></i></a>
+					<a href="https://github.com/dSyncro" aria-label="Github"><i class="fab fa-github"></i></a>
+					<a href="https://www.twitch.tv/dsyncro" aria-label="Twitch"><i class="fab fa-twitch"></i></a>
 				</div>
 				<p>Domenico Mancini &copy; 2021</p>
 			</div>
 			<div class="goto-top">
 				<p style="align-self: flex-start;">&lt;a href=&quot;#&quot;&gt;</p>
-				<a><i class="fas fa-chevron-up"></i></a>
+				<a href="#top"><i class="fas fa-chevron-up"></i></a>
 				<p style="align-self: flex-end;">&lt;/a&gt;</p>
-				<h3>Go to top!</h3>
+				<h1>Go to top!</h1>
 			</div>
 		</div>
 		<p>&lt;/footer&gt;</p>
 	</footer>
-	
+
 	<script defer src="js/navbar.js"></script>
 	<script defer src="js/scrollIntoView.js"></script>
 	<script defer src="js/skillsSelector.js"></script>

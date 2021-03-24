@@ -25,7 +25,7 @@
         font-style: italic;
         line-height: 1.5;
 
-        h3 {
+        p {
             font-size: var(--font-h3);
             font-style: italic;
             color: core.$accent-color;
@@ -39,7 +39,8 @@
                 font-size: var(--font-h2);
             }
 
-            h4 {
+            h3 {
+                font-size: var(--font-h4);
                 text-align: center;
             }
 
