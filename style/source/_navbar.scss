@@ -57,12 +57,22 @@ nav {
     &.opaque {
         background: rgba(var(--black-color-rgb), 0.5);
         backdrop-filter: blur(1.5rem);
+        
+        @supports not (backdrop-filter: blur(1.5rem)) {
+            background: rgba(var(--black-color-rgb), 0.95);
+        }
     }
 
     @media (max-width: 75rem) {
         flex-direction: column;
+
         background: rgba(var(--black-color-rgb), 0.5);
         backdrop-filter: blur(1.5rem);
+        
+        @supports not (backdrop-filter: blur(1.5rem)) {
+            background: rgba(var(--black-color-rgb), 0.95);
+        }
+        
         padding: 1rem;
 
         h1::before {
