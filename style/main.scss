@@ -1,14 +1,3 @@
-@use 'core';
-@use 'preloader';
-@use 'navbar';
-@use 'contact';
-@use 'header';
-@use 'mouseScroll';
-@use 'is';
-@use 'works';
-@use 'skills';
-@use 'footer';
-
 html,
 body {
     padding: 0;
@@ -18,7 +7,7 @@ body {
 body {
     width: 100%;
     height: 100%;
-    font-family: core.$heading-font;
+    font-family: var(--h-fs);
     color: var(--white-color);
     background: var(--background-color);
     scroll-behavior: smooth;
@@ -30,7 +19,7 @@ a {
     transition: 350ms;
 
     &:hover {
-        color: core.$accent-color;
+        color: var(--accent-color);
     }
 }
 
@@ -71,7 +60,7 @@ header {
     margin: 2rem 0;
 
     span {
-        color: core.$accent-color;
+        color: var(--accent-color);
     }
 }
 

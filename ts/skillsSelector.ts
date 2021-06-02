@@ -1,32 +1,33 @@
-const skills = document.querySelector('#skills .skills-wrapper');
+export const skills = document.querySelector('#skills .skills-wrapper');
 
-const proBtn = document.querySelector('#skills .legend #pro');
-const midBtn = document.querySelector('#skills .legend #mid');
-const noobBtn = document.querySelector('#skills .legend #noob');
+export const proBtn = document.querySelector('#skills .legend #pro');
+export const midBtn = document.querySelector('#skills .legend #mid');
+export const noobBtn = document.querySelector('#skills .legend #noob');
 
-const selectSkills = (type) => {
+export const selectSkills = (type: string) => {
     skills.classList.add('filtered');
-    let skillItems = document.querySelectorAll('#skills .skills-wrapper .skill-item');
-    for (s of skillItems) {
+    let skillItems = document.querySelectorAll<HTMLElement>('#skills .skills-wrapper .skill-item');
+    skillItems.forEach(s => {
         if (type in s.dataset)
-            s.classList.add('selected');
+        s.classList.add('selected');
         else s.classList.remove('selected');
-    }
+    });
 }
 
-const deselectSkillBtns = () => {
+export const deselectSkillBtns = () => {
     proBtn.classList.remove('selected');
     midBtn.classList.remove('selected');
     noobBtn.classList.remove('selected');
 }
 
-const clearSkills = () => {
+export const clearSkills = () => {
     deselectSkillBtns();
     skills.classList.remove('filtered');
 
-    let skillItems = document.querySelectorAll('#skills .skills-wrapper .skill-item');
-    for (s of skillItems)
+    let skillItems = document.querySelectorAll<HTMLElement>('#skills .skills-wrapper .skill-item');
+    skillItems.forEach(s => {
         s.classList.remove('selected');
+    }); 
 }
 
 proBtn.addEventListener('click', () => {

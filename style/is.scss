@@ -2,7 +2,7 @@
 
 #is {
     p {
-        font-family: core.$text-font;
+        font-family: var(--p-fs);
         font-size: var(--font-h6);
         font-weight: 100;
         padding: 1rem;
@@ -30,6 +30,7 @@
         align-items: center;
         flex-direction: row-reverse;
         padding: 0 5%;
+        overflow: hidden;
     }
 
     @media (max-width: 48rem) {

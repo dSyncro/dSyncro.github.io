@@ -7,8 +7,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<meta name="google-site-verification" content="r6_57pakuRFPaNYwMjeIXFPIw42udZzbegNyy1VCRZU" />
+
+	<!-- Description -->
 	<meta name="description"
 		content="Domenico Mancini portfolio, full stack web developer from Italy. Working with html, js, css, php, react.">
+	<meta name="theme-color" content="#000">
 
 	<!-- Facebook Meta Tags -->
 	<meta property="og:url" content="https://dsyncro.github.io/">
@@ -27,29 +30,28 @@
 		content="Domenico Mancini portfolio, full stack web developer from Italy. Working with html, js, css, php, react.">
 	<meta name="twitter:image" content="https://dsyncro.github.io/img/portrait.jpg">
 
-	<meta name="description"
-		content="Domenico Mancini portfolio, full stack web developer from Italy. Working with html, js, css, php, react.">
-	<meta name="theme-color" content="#000">
-
+	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-
 	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Montserrat&display=swap" rel="stylesheet"
 		media="print" onload="this.media='all'">
 
+	<!-- Icon Fonts -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
 		integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
 		crossorigin="anonymous" media="print" onload="this.media='all'" />
-
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.10.1/devicon.min.css" media="print"
 		onload="this.media='all'">
 
-	<link rel="stylesheet" href="style/build/style.css">
+	<link rel="stylesheet" href="dist/dsyncro.min.css">
 	<title>Domenico Mancini</title>
 
+	<!-- Favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	<link rel="manifest" href="/manifest.webmanifest">
+
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'">
 </head>
 
 <body class="no-scroll">
@@ -111,9 +113,9 @@
 					<div class="title">
 						<h2>I am Domenico Mancini</h2>
 						<div class="subtitle">
-							<span>&lt;span&gt;</span>
+							<span class="markup">&lt;span&gt;</span>
 							<h3>A Full Stack Developer</h3>
-							<span>&lt;/span&gt;</span>
+							<span class="markup">&lt;/span&gt;</span>
 						</div>
 					</div>
 					<p>&lt;/h1&gt;</p>
@@ -129,12 +131,13 @@
 
 	<main>
 		<section id="is" class="page-section">
-			<h1 class="section-title">
+			<h1 class="section-title" data-aos="fade-right" data-aos-anchor="#is">
 				<span>.about</span>:selected
 			</h1>
 			<div class="presentation">
-				<img class="rounded" srcset="img/portrait-70rem.jpg 392w, img/portrait.jpg" alt="">
-				<div class="text">
+				<img class="rounded" srcset="img/portrait-70rem.jpg 392w, img/portrait.jpg" alt="Domenico Mancini"
+					data-aos="fade-left" data-aos-delay="350" data-aos-once="true" data-aos-anchor="#is">
+				<div class="text" data-aos="fade-right" data-aos-delay="350" data-aos-once="true" data-aos-anchor="#is">
 					<p>Hi there! 👋</p>
 					<p>
 						I am Domenico Mancini, a self taught full stack developer and web designer from Italy.
@@ -154,24 +157,25 @@
 		</section>
 
 		<section id="works" class="page-section">
-			<h1 class="section-title">
+			<h1 class="section-title" data-aos="fade-right">
 				<span>.works</span>.selected = <span>true</span>
 			</h1>
 
 			<div class="works-grid">
-				<div class="card">
+				<div class="card" data-aos="zoom-in" data-aos-duration="500">
 					<img srcset="img/thisWebsite-48rem.jpg 768w, img/thisWebsite-pp.jpg 1920w, img/thisWebsite.jpg"
 						alt="This Website">
 					<div class="caption">
 						<h1>This Website</h1>
 						<p>You would never ever tell it, right?</p>
-						<a href="#" aria-label="This website itself">Visit This Website <i
-								class="fas fa-chevron-right fa-xs" style="margin-left: 0.25rem;"></i></a>
+						<a href="#" aria-label="This website itself">
+							Visit This Website
+							<i class="fas fa-chevron-right fa-xs" style="margin-left: 0.25rem;"></i>
+						</a>
 					</div>
 				</div>
-				<div class="card">
-					<img srcset="img/socio-48rem.jpg 768w, img/socio-pp.jpg 1920w, img/socio.jpg"
-						alt="Socio">
+				<div class="card" data-aos="zoom-in" data-aos-duration="500">
+					<img srcset="img/socio-48rem.jpg 768w, img/socio-pp.jpg 1920w, img/socio.jpg" alt="Socio">
 					<div class="caption">
 						<h1>Socio</h1>
 						<p>
@@ -179,31 +183,34 @@
 							stack developer. Made with HTML, CSS, JS, React, Redux, Express and
 							many other technologies.
 						</p>
-						<a href="https://socio-tau.vercel.app" aria-label="Socio App">Visit Socio <i
-								class="fas fa-chevron-right fa-xs" style="margin-left: 0.25rem;"></i></a>
+						<a href="https://socio-tau.vercel.app" aria-label="Socio App">
+							Visit Socio
+							<i class="fas fa-chevron-right fa-xs" style="margin-left: 0.25rem;"></i>
+						</a>
 					</div>
 				</div>
-				<div class="card">
+				<div class="card" data-aos="zoom-in" data-aos-duration="500">
 					<img srcset="img/easyComponents-48rem.jpg 768w, img/easyComponents-pp.jpg 1920w, img/easyComponents.jpg"
 						alt="Easy Components">
 					<div class="caption">
 						<h1>Easy Components</h1>
 						<p>
-							Easy Components is a UI framework to easily integrate useful and difficult
-							to make components seamlessly in your page.
+							Easy Components is a UI framework to easily integrate some useful components seamlessly in
+							your page. Based on Typescript and Webpack.
 						</p>
-						<a href="https://dsyncro.github.io/EasyComponents/sample.html" aria-label="Easy Components">Visit Easy Components<i
-								class="fas fa-chevron-right fa-xs" style="margin-left: 0.25rem;"></i></a>
+						<a href="https://dsyncro.github.io/EasyComponents/sample.html"
+							aria-label="Easy Components">Visit Easy Components<i class="fas fa-chevron-right fa-xs"
+								style="margin-left: 0.25rem;"></i></a>
 					</div>
 				</div>
 			</div>
 		</section>
 
 		<section id="skills" class="page-section">
-			<h1 class="section-title">
+			<h1 class="section-title" data-aos="fade-right" data-aos-anchor="#skills">
 				<span>.skills</span>.showcase()
 			</h1>
-			<div class="aligner">
+			<div class="aligner" data-aos="fade" data-aos-delay="350" data-aos-anchor="#skills">
 				<div class="skills-wrapper">
 					<div class="languages">
 						<h1>Languages</h1>
@@ -402,17 +409,27 @@
 	<footer>
 		<p>&lt;footer&gt;</p>
 		<div class="actual-footer">
-			<a href="#"><img src="img/dSyncro.svg" alt="dSyncro Logo - Footer" class="logo"></a>
+			<a href="#" data-aos="zoom-in" data-aos-anchor=".actual-footer" data-aos-once="true">
+				<img src="img/dSyncro.svg" alt="dSyncro Logo - Footer" class="logo">
+			</a>
 			<div class="content">
-				<div class="link-icons">
-					<a href="https://www.instagram.com/not.domenico/" aria-label="Instagram"><i
-							class="fab fa-instagram"></i></a>
-					<a href="https://github.com/dSyncro" aria-label="Github"><i class="fab fa-github"></i></a>
-					<a href="https://www.twitch.tv/dsyncro" aria-label="Twitch"><i class="fab fa-twitch"></i></a>
+				<div class="link-icons" data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor=".actual-footer"
+					data-aos-once="true">
+					<a href="https://www.instagram.com/not.domenico/" aria-label="Instagram">
+						<i class="fab fa-instagram"></i>
+					</a>
+					<a href="https://github.com/dSyncro" aria-label="Github">
+						<i class="fab fa-github"></i>
+					</a>
+					<a href="https://www.twitch.tv/dsyncro" aria-label="Twitch">
+						<i class="fab fa-twitch"></i>
+					</a>
 				</div>
-				<p>Domenico Mancini &copy; 2021</p>
+				<p data-aos="fade-up" data-aos-duration="1000" data-aos-anchor=".actual-footer" data-aos-once="true">
+					Domenico Mancini &copy; 2021</p>
 			</div>
-			<div class="goto-top">
+			<div class="goto-top" data-aos="zoom-in" data-aos-duration="1500" data-aos-anchor=".actual-footer"
+				data-aos-once="true">
 				<p style="align-self: flex-start;">&lt;a href=&quot;#&quot;&gt;</p>
 				<a href="#top"><i class="fas fa-chevron-up"></i></a>
 				<p style="align-self: flex-end;">&lt;/a&gt;</p>
@@ -422,12 +439,14 @@
 		<p>&lt;/footer&gt;</p>
 	</footer>
 
-	<script defer src="js/navbar.js"></script>
-	<script defer src="js/scrollIntoView.js"></script>
-	<script defer src="js/skillsSelector.js"></script>
-	<script defer src="js/preloader.js"></script>
-	<script defer src="js/contactForm.js"></script>
-	<script defer src="js/darkModeSwitch.js"></script>
+	<script defer src="dist/dsyncro.min.js"></script>
+
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			startEvent: "onPreloadEnd"
+		});
+	</script>
 </body>
 
 </html>

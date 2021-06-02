@@ -25,7 +25,7 @@
         }
 
         .caption {
-            font-family: core.$text-font;
+            font-family: var(--p-fs);
             font-weight: 100;
             position: absolute;
             height: 25%;
@@ -45,7 +45,7 @@
 
             a {
                 border-radius: 9999px;
-                font-family: core.$text-font;
+                font-family: var(--p-fs);
                 font-weight: 400;
                 font-size: 1.25rem;
                 border: 2px solid var(--white-color);
@@ -55,8 +55,8 @@
                 display: none;
 
                 &:hover {
-                    color: core.$accent-color;
-                    border-color: core.$accent-color;
+                    color: var(--accent-color);
+                    border-color: var(--accent-color);
                 }
             }
 
@@ -80,7 +80,7 @@
                 }
 
                 h1 {
-                    color: core.$accent-color;
+                    color: var(--accent-color);
                     font-size: var(--font-h2);
                 }
 

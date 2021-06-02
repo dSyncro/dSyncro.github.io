@@ -7,7 +7,7 @@
     position: fixed;
     background: var(--background-color);
     color: var(--white-color);
-    font-family: core.$heading-font;
+    font-family: var(--h-fs);
     font-weight: bold;
     opacity: 1;
     width: 100%;
@@ -21,7 +21,7 @@
     font-size: var(--font-h1);
 
     span {
-        color: core.$accent-color;
+        color: var(--accent-color);
     }
 
     &.hidden {

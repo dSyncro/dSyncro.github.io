@@ -1,7 +1,7 @@
 @use 'core';
 
 footer {
-    font-family: core.$heading-font;
+    font-family: var(--h-fs);
     background: var(--black-color);
     color: rgba(var(--white-color-rgb), 0.5);
     font-style: italic;
@@ -13,6 +13,7 @@ footer {
         justify-content: space-between;
         align-items: center;
         padding: 2rem;
+        overflow: hidden;
 
         img {
             width: 6rem;
@@ -25,7 +26,7 @@ footer {
             align-items: center;
 
             p {
-                font-family: core.$heading-font;
+                font-family: var(--h-fs);
                 color: var(--white-color);
                 font-style: normal;
             }
@@ -53,7 +54,7 @@ footer {
 
             p {
                 font-weight: 100;
-                color: core.$accent-color;
+                color: var(--accent-color);
                 opacity: 0.25;
                 font-size: 1vmax;
             }

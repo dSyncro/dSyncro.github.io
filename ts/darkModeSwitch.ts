@@ -1,4 +1,4 @@
-const darkModeSwitch = document.querySelector('nav ul li .fa-lightbulb');
+export const darkModeSwitch: HTMLElement = document.querySelector<HTMLElement>('nav ul li .fa-lightbulb')!;
 
 darkModeSwitch.addEventListener('click', () => {
     darkModeSwitch.classList.toggle('far');

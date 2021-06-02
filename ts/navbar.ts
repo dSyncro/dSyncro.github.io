@@ -1,6 +1,6 @@
-const navbar = document.querySelector('nav');
-const hamburgerIcon = document.querySelector('nav .hamburger-menu');
-const hamburgerMenu = document.querySelector('nav ul');
+export const navbar: HTMLElement = document.querySelector<HTMLElement>('nav')!;
+export const hamburgerIcon: HTMLElement = document.querySelector<HTMLElement>('nav .hamburger-menu')!;
+export const hamburgerMenu: HTMLElement = document.querySelector<HTMLElement>('nav ul')!;
 
 window.addEventListener('scroll', () => {
     if (window.scrollY == 0)

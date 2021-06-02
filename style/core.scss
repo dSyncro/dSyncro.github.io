@@ -1,14 +1,3 @@
-@use 'reset';
-@use 'utility';
-@use 'customScrollbar';
-
-$heading-font: 'JetBrains Mono', monospace;
-$text-font: 'Montserrat', sans-serif;
-
-$accent-color: #00FFA4;
-$learning-color: #FF9900;
-$basic-color: #ffeb94;
-
 * {
     box-sizing: border-box;
 }
@@ -16,9 +5,16 @@ $basic-color: #ffeb94;
 :root {
     font-size: 16px;
 
+    --h-fs: 'JetBrains Mono', monospace;
+    --p-fs: 'Montserrat', sans-serif;
+
     --background-color: #121212;
     --white-color: #fff;
     --black-color: #000;
+    --accent-color: #00FFA4;
+    --learning-color: #FF9900;
+    --basic-color: #ffeb94; 
+
     --white-color-rgb: 255, 255, 255;
     --black-color-rgb: 0, 0, 0;
 

@@ -35,7 +35,7 @@ $animDuration: 5s;
     p {
         font-size: var(--font-p);
         margin-top: 1.5rem;
-        font-family: core.$text-font;
+        font-family: var(--p-fs);
         letter-spacing: 0.5rem;
         color: $colorOutline;
         -webkit-animation: colorText 5s ease-out infinite, nudgeText 5s ease-out infinite;
@@ -127,7 +127,7 @@ $animDuration: 5s;
     }
     6% {
         opacity: 1;
-        transform: scale(0.9) translateY($posTrackball/4);
+        transform: scale(0.9) translateY($posTrackball * 0.25);
     }
     14% {
         opacity: 0;
@@ -149,7 +149,7 @@ $animDuration: 5s;
     }
     36% {
         opacity: 1;
-        transform: scale(0.9) translateY($posTrackball/4);
+        transform: scale(0.9) translateY($posTrackball * 0.25);
     }
     44% {
         opacity: 0;
@@ -171,7 +171,7 @@ $animDuration: 5s;
     }
     66% {
         opacity: 1;
-        transform: scale(0.9) translateY($posTrackball/4);
+        transform: scale(0.9) translateY($posTrackball * 0.25);
     }
     74% {
         opacity: 0;

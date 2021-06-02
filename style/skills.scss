@@ -36,7 +36,7 @@
             font-size: var(--font-h6);
             justify-content: space-between;
             align-items: center;
-            font-family: core.$text-font;
+            font-family: var(--p-fs);
             transition: 500ms;
 
             @media (max-width: 48rem) {
@@ -53,19 +53,19 @@
 
             &[data-noob] {
                 .checkmark {
-                    color: core.$basic-color;
+                    color: var(--basic-color);
                 }
             }
 
             &[data-mid] {
                 .checkmark {
-                    color: core.$learning-color;
+                    color: var(--learning-color);
                 }
             }
 
             &[data-pro] {
                 .checkmark {
-                    color: core.$accent-color;
+                    color: var(--accent-color);
                 }
             }
         }
@@ -90,7 +90,7 @@
         flex-direction: column;
         align-items: flex-start;
         font-size: var(--font-h6);
-        font-family: core.$text-font;
+        font-family: var(--p-fs);
 
         & > :not(:last-child) {
             margin-bottom: 0.5rem;
@@ -109,15 +109,15 @@
                 background: var(--white-color);
 
                 &[data-noob] {
-                    background: core.$basic-color;
+                    background: var(--basic-color);
                 }
 
                 &[data-mid] {
-                    background: core.$learning-color;
+                    background: var(--learning-color);
                 }
 
                 &[data-pro] {
-                    background: core.$accent-color;
+                    background: var(--accent-color);
                 }
             }
 
@@ -133,7 +133,7 @@
                 display: none;
 
                 &:hover {
-                    color: core.$accent-color;
+                    color: var(--accent-color);
                 }
             }
 

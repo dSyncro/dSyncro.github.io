@@ -34,7 +34,7 @@
     i {
         transition: 350ms;
         &:hover {
-            color: core.$accent-color;
+            color: var(--accent-color);
         }
     }
 
@@ -56,9 +56,9 @@
     input[type="text"],
     input[type="email"],
     textarea {
-        caret-color: core.$accent-color;
+        caret-color: var(--accent-color);
         color: var(--white-color);
-        font-family: core.$heading-font;
+        font-family: var(--h-fs);
         font-weight: 400;
         background: var(--background-color);
         font-size: var(--font-h5);
@@ -67,7 +67,7 @@
         transition: 350ms;
 
         &:focus {
-            border: 2px solid core.$accent-color;
+            border: 2px solid var(--accent-color);
         }
     }
 
@@ -79,7 +79,7 @@
 
     button {
         padding: 4vmin;
-        font-family: core.$heading-font;
+        font-family: var(--h-fs);
         font-size: var(--font-h6);
         color: var(--white-color);
         border: 2px solid var(--white-color);
@@ -89,14 +89,14 @@
         margin-top: 6vmin;
 
         &:focus {
-            border: 2px solid core.$accent-color;
-            color: core.$accent-color;
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
         }
 
         &:hover {
-            background: core.$accent-color;
+            background: var(--accent-color);
             color: var(--black-color);
-            border-color: core.$accent-color;
+            border-color: var(--accent-color);
         }
     }
 }
