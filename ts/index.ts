@@ -6,19 +6,25 @@ import "./scrollIntoView";
 import "./skillsSelector";
 
 // Libs
-import Typewriter from '../libs/typewriter';
+import AOS from "../libs/aos/aos";
+AOS.init({
+    startEvent: "onPreloadEnd"
+});
 
+import Typewriter from '../libs/typewriter-js/typewriter';
 document.addEventListener("onPreloadEnd", () => {
     const titleTypeWriter = new Typewriter(".title h2");
 
-    titleTypeWriter.typeString("I am Domenico Mancini").callFunction(() => {
-        titleTypeWriter.stop();
-        setTimeout(() => {
-            const caret = document.querySelector<HTMLElement>(".title h2 .Typewriter__cursor");
-            caret.style.animation = "none";
-            caret.style.opacity = "0";
-        }, 1000);
-    }, null).start();
+    setTimeout(() => {
+        titleTypeWriter.typeString("I am Domenico Mancini").callFunction(() => {
+            titleTypeWriter.stop();
+            setTimeout(() => {
+                const caret = document.querySelector<HTMLElement>(".title h2 .Typewriter__cursor");
+                caret.style.animation = "none";
+                caret.style.opacity = "0";
+            }, 1000);
+        }, null).start();
+    }, 1500);
 });
 
 // Style
@@ -35,3 +41,4 @@ import "../style/mouseScroll.scss";
 import "../style/skills.scss";
 import "../style/works.scss";
 import "../style/footer.scss";
+import "../style/scrollbar.scss";
